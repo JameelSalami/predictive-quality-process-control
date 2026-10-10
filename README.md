@@ -70,3 +70,11 @@ dataset terms require independent review.
 
 No affiliation with source-data publishers, machinery vendors, research
 institutions, or relevant prospective employers is implied.
+
+
+## Sources and licensing
+
+- [MIT software license](LICENSE)
+- [License scope and separate third-party rights](LICENSE-SCOPE.md)
+- [Source attribution and original-versus-upstream provenance](ATTRIBUTION.md)
+- [Dataset, engineering-tool and standards attribution](THIRD-PARTY-DATA.md)
