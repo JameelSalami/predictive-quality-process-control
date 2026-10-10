@@ -3,8 +3,8 @@
 - **Software code:** Original project-authored source under [MIT](LICENSE)
   subject to contributor/rightsholder review; [license scope](LICENSE-SCOPE.md).
 - **External datasets:** Zenodo DED-LB Ti-6Al-4V powder and NIST
-  AM-Bench 2022, including creators, DOIs, transformation notes and
-  unresolved license verification, in
+  AM-Bench 2022, including creators, DOIs, transformation notes and the independently
+  verified original dataset CC BY 4.0 license, in
   [THIRD-PARTY-DATA.md](THIRD-PARTY-DATA.md).
 - **Full bibliographic source register:**
   [sources/source-register.csv](projects/fixture-load-path-structural-verification/sources/source-register.csv).

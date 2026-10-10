@@ -8,11 +8,15 @@ Asociación de Investigación Metalúrgica del Noroeste.
 
 - DOI: https://doi.org/10.5281/zenodo.19727700
 - Original record: https://zenodo.org/records/19727700
-- License noted in the project's original acquisition/source manifest:
-  **CC BY 4.0**, https://creativecommons.org/licenses/by/4.0/
-- Licensing caveat: confirm license terms on the *original record/files*
-  before external redistribution. This directory notice is not itself
-  a substitute for verified source-file permissions.
+- License: **CC BY 4.0**, https://creativecommons.org/licenses/by/4.0/
+  — confirmed October 10, 2026 from the [published Zenodo
+  record](https://zenodo.org/api/records/19727700)
+  (`metadata.license.id=cc-by-4.0`) and the independently registered
+  [DataCite DOI](https://api.datacite.org/dois/10.5281/zenodo.19727700)
+  (`rightsIdentifier=cc-by-4.0`).
+- Attribution and modifications remain required when distributing
+  the selected/reduced derived dataset. The repository's MIT license
+  does not replace CC BY for the upstream data.
 
 **Changes from source:** The included `paired-track-observations.csv`
 uses a selected 23-track subset (tracks 28–50); validates process-track

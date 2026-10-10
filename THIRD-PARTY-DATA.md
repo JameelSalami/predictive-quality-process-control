@@ -17,7 +17,7 @@ Asociación de Investigación Metalúrgica del Noroeste.
 
 - Permanent record: https://doi.org/10.5281/zenodo.19727700
 - Canonical landing page: https://zenodo.org/records/19727700
-- Recorded license in the study's source manifest: **CC BY 4.0**:
+- Published record's confirmed license (and study manifest): **CC BY 4.0**:
   https://creativecommons.org/licenses/by/4.0/
 - Provenance/recorded MD5 identities of original archives:
   [source-manifest.json](projects/fixture-load-path-structural-verification/data/public/zenodo-ded-powder/source-manifest.json).
@@ -38,13 +38,17 @@ published by the original creators.
 `.../evidence/receipts/ded-process-prediction.json`,
 `.../figures/prediction-performance.svg`, and related case-study claims.
 
-**Rights check:** The local manifest records CC BY 4.0. The currently
-accessible record view independently confirms the source, title, creators
-and DOI but has not established a verifiable license *identifier* via its
-publicly rendered rights field. Confirm that the exact deposited files
-carry CC BY 4.0 (or another applicable license) **before publicly
-redistributing this derived table or figure**. Pending verification,
-do not treat the software's MIT label as permission for these data.
+**Rights check completed October 10, 2026:** The original published
+[Zenodo record API](https://zenodo.org/api/records/19727700) identifies
+`metadata.license.id` as `cc-by-4.0`. The independently registered
+[DataCite DOI metadata](https://api.datacite.org/dois/10.5281/zenodo.19727700)
+records the SPDX rights identifier `cc-by-4.0` and Creative Commons
+Attribution 4.0 license URL. These are record-level rights declarations
+for the deposited files. The project attributes the data creators and
+clearly identifies its selected and transformed measurements/figures.
+CC BY 4.0 applies to that external data and its licensed adaptations;
+the separate root MIT license applies to the project's own software,
+not to a sublicense of the external source dataset.
 
 Raw Zenodo archives, source macrograph images, source videos and VTK
 streams are **not redistributed** in this snapshot.
