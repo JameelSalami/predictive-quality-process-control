@@ -1,6 +1,6 @@
 # Predictive Quality & Process Control
 
-**Publication candidate — not yet publicly released or licensed.**
+**Publication candidate — not publicly released. Original authored software is staged under MIT pending rights review.**
 
 How does in-process sensing improve a measured physical characteristic, and what evidence is still missing before a control intervention?
 
@@ -60,12 +60,13 @@ test seams. Review provenance before republishing any third-party material.
 
 ## Publication and licensing
 
-Source publication and code reuse licensing are **not yet approved**. There
-is deliberately no open-source license in this candidate. A later Apache-2.0
-or MIT decision for authored code **must not** be treated as licensing the
-third-party datasets, third-party video assets, physical machine output or
-research prose. The source register and originating dataset rights must be
-reviewed independently.
+The original authored software code and associated original software
+documentation are staged under the [MIT License](LICENSE), with publication
+and contributor/ownership authorization still pending. See
+[license scope](LICENSE-SCOPE.md). MIT does **not** relicense third-party
+datasets, source measurements, figures, video/media, physical machine output
+or separately owned research material. The source register and originating
+dataset terms require independent review.
 
 No affiliation with source-data publishers, machinery vendors, research
 institutions, or relevant prospective employers is implied.

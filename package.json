@@ -2,6 +2,7 @@
   "name": "predictive-quality-process-control",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "Predictive quality, measurement qualification, capability, SPC and manufacturing evidence boundaries",
   "engines": {

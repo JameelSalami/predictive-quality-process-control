@@ -16,4 +16,4 @@ Raw camera/VTK/macrograph archives are **not** included. The same-track normaliz
 - The MSA, control chart, Cp/Cpk and OCAP demonstration is **synthetic** and independent of the external DED data.
 - Selected structural and adapter fixtures are independently created/research fixtures; no vendor certification is implied.
 
-**Authored code is currently unlicensed in this unpublished candidate.** A future Apache-2.0/MIT software grant would not automatically relicense datasets, third-party media or external solver/toolchain components. Review exact dataset terms, data attribution, rights provenance and figure sources before going public.
+**Original authored code is staged under MIT, but is not publicly released.** The MIT license does not relicense this CC BY 4.0 dataset or third-party media/solver components. Review the source's copyright, data attribution, license conditions, provenance, and figures before publication. See [license scope](LICENSE-SCOPE.md).
