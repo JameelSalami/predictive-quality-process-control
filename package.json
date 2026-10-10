@@ -15,7 +15,9 @@
     "test:node": "node --import tsx --test projects/fixture-load-path-structural-verification/analysis/test/*.test.ts",
     "test:quality": "npm run test:node",
     "analyze:ded": "node --import tsx projects/fixture-load-path-structural-verification/analysis/src/run-ded-process.ts",
-    "analyze:quality": "node --import tsx projects/fixture-load-path-structural-verification/analysis/src/run-quality-system.ts"
+    "analyze:quality": "node --import tsx projects/fixture-load-path-structural-verification/analysis/src/run-quality-system.ts",
+    "study:ded:falsify": "python3 projects/fixture-load-path-structural-verification/analysis/falsification/challenge_ded.py",
+    "test:ded:falsify": "python3 -m unittest discover -s projects/fixture-load-path-structural-verification/analysis/falsification -p test_*.py"
   },
   "dependencies": {
     "archiver": "8.0.0",

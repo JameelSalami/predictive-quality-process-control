@@ -4,7 +4,7 @@
 
 This project demonstrates how an engineer can connect an existing manufacturing stack to a traceable quality-control workflow rather than requiring a greenfield system.
 
-**Real manufacturing result:** on 23 evidence-clean DED-LB tracks containing 4,905 laser-active IR frames, adding in-process IR features reduced grouped-held-out bead-width RMSE from **0.4683 mm to 0.4279 mm (8.64%)** and increased held-out R² from **0.250 to 0.374**. A harder unseen-speed holdout remained below zero R², so extrapolation is explicitly not claimed.
+**Real manufacturing result and falsification:** on 23 evidence-clean DED-LB tracks (4,905 aligned IR frames, **23 independent responses**), fixed recipe-plus-IR ridge reduced grouped-held-out RMSE from **0.4683 to 0.4279 mm (8.64%)** relative to a fixed *linear* recipe model. A later [post-hoc model challenge](analysis/falsification/FINDINGS.md) found **0.3868 mm** for a nested polynomial recipe-only comparator on the same data. IR-specific advantage and scientific novelty are **not established**. Unseen-speed extrapolation had negative R².
 
 **Production-control workflow:** the real dataset is automatically blocked from MSA, capability, and SPC because it lacks the required production evidence. A separate synthetic stream demonstrates crossed Gage R&R, process stability, Cp/Cpk/Pp/Ppk, I-MR monitoring, OCAP containment, corrective action, and mandatory requalification.
 

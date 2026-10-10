@@ -4,7 +4,7 @@
 
 `public/zenodo-ded-powder/` contains the compact normalized same-track treatment and source manifest for Zenodo DOI `10.5281/zenodo.19727700`.
 
-`ded-process-prediction.json` contains the reproducible recipe-only versus recipe-plus-IR held-out comparison.
+`ded-process-prediction.json` contains the original fixed linear recipe-only versus fixed recipe-plus-IR held-out comparison. This is historical evidence, not the final comparative novelty conclusion. The later post-hoc [falsification analysis](../analysis/falsification/FINDINGS.md) tests stronger recipe-only comparators using the same curated data.
 
 ## Synthetic quality-control demonstration
 

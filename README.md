@@ -2,7 +2,7 @@
 
 **Independent open-source research software — MIT for original code. External research datasets retain their upstream licenses.**
 
-How does in-process sensing improve a measured physical characteristic, and what evidence is still missing before a control intervention?
+What do in-process sensors add beyond strong process-only baselines, and what evidence is required before any prediction influences manufacturing control?
 
 This is an isolated source snapshot extracted from a larger, private manufacturing
 CI research program. It retains the original study directory under
@@ -14,6 +14,7 @@ studies, video assets, interactive demos and the original Git history are exclud
 ## Start here
 
 - [Study and results](projects/fixture-load-path-structural-verification/README.md)
+- [Stronger recipe-only falsification study](projects/fixture-load-path-structural-verification/analysis/falsification/FINDINGS.md) — reproducible post-hoc comparator; IR novelty not established
 - [Research data provenance](projects/fixture-load-path-structural-verification/data/README.md)
 - [Source register](projects/fixture-load-path-structural-verification/sources/source-register.csv)
 - [Evidence / receipts](projects/fixture-load-path-structural-verification/evidence/README.md)
@@ -22,11 +23,16 @@ studies, video assets, interactive demos and the original Git history are exclud
 
 ## Reproduce the source-level checks
 
-Install Node.js 22+ and Python 3.12+ (Python is needed for Hydraulic test seams):
+Install Node.js 22+ for the core checks. Python 3.12+ and NumPy are optional for the independently implemented DED falsification:
 
 ```sh
 npm ci
 npm run verify
+
+# Optional: independently reproduce the post-hoc DED challenger
+python3 -m pip install -r projects/fixture-load-path-structural-verification/analysis/falsification/requirements.txt
+npm run study:ded:falsify
+npm run test:ded:falsify
 ```
 
 The `verify` command exercises source-level conformance, fixture integrity
@@ -36,7 +42,7 @@ tools (e.g. Julia, Gmsh, CalculiX) have distinct non-default setup requirements.
 
 ## Evidence boundaries
 
-The DED-LB same-track predictor uses externally sourced public manufacturing data. Downstream MSA, Cp/Cpk and SPC/OCAP are independently synthetic demonstrations, not validated production process controls.
+The DED-LB same-track predictor uses externally sourced public manufacturing data. A fixed recipe-plus-IR model beat a fixed linear recipe baseline (0.4279 vs 0.4683 mm RMSE), **but a later post-hoc nested polynomial recipe-only model scored 0.3868 mm RMSE** on the same 23-track/five-group data. Neither independent IR advantage nor novel predictive performance is established; see the [full falsification protocol and results](projects/fixture-load-path-structural-verification/analysis/falsification/FINDINGS.md). Downstream MSA, Cp/Cpk and SPC/OCAP are independently synthetic demonstrations, not validated production process controls.
 
 ### Standalone extraction notes
 

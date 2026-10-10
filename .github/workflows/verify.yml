@@ -20,3 +20,9 @@ jobs:
           python-version: '3.12'
       - run: npm ci --ignore-scripts
       - run: npm run verify
+      - name: Install independent NumPy challenger
+        run: python -m pip install -r projects/fixture-load-path-structural-verification/analysis/falsification/requirements.txt
+      - name: Reproduce post-hoc DED comparator
+        run: npm run study:ded:falsify
+      - name: Validate no-leakage and falsification checks
+        run: npm run test:ded:falsify

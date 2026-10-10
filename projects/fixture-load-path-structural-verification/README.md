@@ -1,13 +1,13 @@
 # Predictive Quality & Process Control
 
-**From in-process sensing to final CTQ, MSA, capability, SPC, and OCAP**
+**Real-data model comparison, falsification, and clearly separated synthetic MSA/SPC/OCAP**
 
 This case study asks two connected manufacturing questions:
 
 1. **Can information available during manufacturing improve prediction of final physical quality?**
 2. **Once a CTQ is trusted, what evidence is required before it can enter production control?**
 
-The first question uses real public manufacturing data. The second is demonstrated with a clearly separated synthetic production-control stream because the public dataset does not contain a production population, engineering specification limits, or a valid MSA study.
+The first question uses real public manufacturing data **and a later, explicitly post-hoc model-comparator challenge**. The second is demonstrated with a clearly separated synthetic production-control stream because the public dataset does not contain a production population, engineering specification limits, or a valid MSA study.
 
 **Reviewer shortcut:** [Portfolio brief](PORTFOLIO_BRIEF.md) · one-page architecture, evidence boundaries, and key results.
 
@@ -31,11 +31,27 @@ Leave-one-powder-flow-level-out bead-width prediction:
 | Recipe only | 0.4683 mm | 0.250 |
 | Recipe + IR | **0.4279 mm** | **0.374** |
 
-IR reduces held-out RMSE by **8.64%** inside the selected process window.
+The *fixed* recipe-plus-IR model reduces held-out RMSE by **8.64% relative to the fixed linear recipe baseline**. This comparison was real, but it is **not the strongest tested recipe-only baseline**.
 
-Leave-one-speed-level-out R² remains negative (**-0.201**), so unseen-regime extrapolation is not claimed.
+A later [post-hoc falsification study](analysis/falsification/FINDINGS.md), with nested train-only regularization selection, found **0.3868 mm RMSE for recipe-only polynomial features** versus **0.4279 mm for the original fixed recipe-plus-IR treatment**. Its conditional IR permutation result was p = 0.184. The strongest model was selected after examining the corpus; these exploratory results **do not prove IR redundancy, scientific novelty, or independent predictive generalization**. They require an independently acquired dataset.
 
-![Real predictive-quality result](figures/prediction-performance.svg)
+Leave-one-speed-level-out R² for the original fixed IR model remains negative (**-0.201**), so unseen-regime extrapolation is not claimed.
+
+![Original fixed-model predictive-quality comparison](figures/prediction-performance.svg)
+
+*This figure shows the earlier fixed recipe/IR comparison, not the later stronger post-hoc comparator. See [falsification findings](analysis/falsification/FINDINGS.md) for the full model table and limits.*
+
+### Reproduce the falsification challenger
+
+From the repository root, with Python 3.12+:
+
+```sh
+python3 -m pip install -r projects/fixture-load-path-structural-verification/analysis/falsification/requirements.txt
+npm run study:ded:falsify
+npm run test:ded:falsify
+```
+
+The script checks the existing curated CSV/source hashes, runs grouped comparisons and conditional permutations, and regenerates its own post-hoc results. **It does not re-extract the original camera frames or claim blind replication.**
 
 ## Automated quality gates
 
@@ -43,7 +59,7 @@ The real DED path stops where the evidence stops:
 
 | Gate | Real DED status |
 | --- | --- |
-| Same-run process → CTQ prediction | **supported within window** |
+| Exploratory process → CTQ modeling | **observed on 23 tracks; IR-specific advantage not established** |
 | MSA / Gage R&R | **not assessable** |
 | Process capability | **not assessable** |
 | SPC deployment | **not active** |

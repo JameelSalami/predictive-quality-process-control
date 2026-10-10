@@ -1,0 +1,2 @@
+# Independent post-hoc 23-track challenger; not needed for the Node study checks.
+numpy==2.5.3

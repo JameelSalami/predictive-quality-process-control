@@ -121,6 +121,9 @@ Leave one powder-flow level out at a time:
 
 Relative RMSE reduction: **8.64%**.
 
+**Later falsification (post-hoc, not blind):** the [full comparator study](analysis/falsification/FINDINGS.md) used train-fold-only tuning and a stronger polynomial recipe-only model. Its best recipe-only model scored **0.3868 mm RMSE**, beating the original fixed recipe-plus-IR model's 0.4279 mm on this same 23-track corpus; within-speed IR permutations gave p = 0.184. The initial 8.64% comparison is not evidence of a general IR-specific improvement or scientific novelty. The selected best recipe model was itself chosen post-hoc, and all observations remain from one source dataset.
+
+
 ![Real DED grouped-held-out prediction result](figures/prediction-performance.svg){fig-alt="Recipe-only bead-width RMSE of 0.4683 mm versus recipe plus IR RMSE of 0.4279 mm, with unseen-speed extrapolation explicitly unsupported."}
 
 ## Unseen-speed stress test
