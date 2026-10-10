@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img">
+  <style>
+    text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #111827; }
+    .title { font-size: 34px; font-weight: 700; }
+    .subtitle { font-size: 19px; fill: #4b5563; }
+    .section { font-size: 20px; font-weight: 700; }
+    .label { font-size: 17px; font-weight: 600; }
+    .small { font-size: 15px; fill: #4b5563; }
+    .tiny { font-size: 13px; fill: #6b7280; }
+    .box { fill: #ffffff; stroke: #334155; stroke-width: 2; rx: 16; }
+    .core { fill: #f8fafc; stroke: #0f172a; stroke-width: 3; rx: 18; }
+    .flow { stroke: #64748b; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+    .rule { stroke: #94a3b8; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  
+    <text x="60" y="60" class="title">Does in-process sensing add predictive value?</text>
+    <text x="60" y="94" class="subtitle">Real public DED-LB data · leave-one-powder-flow-level-out validation · bead-width CTQ</text>
+    <text x="100" y="150" class="section">Held-out RMSE</text>
+    <line x1="100" y1="520" x2="700" y2="520" stroke="#334155" stroke-width="2"/>
+    <line x1="100" y1="190" x2="100" y2="520" stroke="#334155" stroke-width="2"/>
+  
+      <rect x="180" y="256" width="170" height="264" rx="12" fill="#cbd5e1" stroke="#475569" stroke-width="1.5"/>
+      <text x="265" y="242" text-anchor="middle" class="label">0.4683 mm</text>
+      <text x="265" y="554" text-anchor="middle" class="label">Recipe only</text>
+      <text x="265" y="581" text-anchor="middle" class="small">held-out R² = 0.250</text>
+    
+      <rect x="420" y="278.8098003506491" width="170" height="241.19019964935092" rx="12" fill="#94a3b8" stroke="#475569" stroke-width="1.5"/>
+      <text x="505" y="264.8098003506491" text-anchor="middle" class="label">0.4279 mm</text>
+      <text x="505" y="554" text-anchor="middle" class="label">Recipe + IR</text>
+      <text x="505" y="581" text-anchor="middle" class="small">held-out R² = 0.374</text>
+    
+    <rect x="765" y="175" width="375" height="165" class="core"/>
+    <text x="952" y="217" text-anchor="middle" class="section">8.64% lower RMSE</text>
+    <text x="952" y="254" text-anchor="middle" class="small">IR adds incremental predictive value</text>
+    <text x="952" y="282" text-anchor="middle" class="small">inside the curated 1000 W window</text>
+    <text x="952" y="315" text-anchor="middle" class="tiny">23 tracks · 4,905 aligned active IR frames</text>
+
+    <rect x="765" y="375" width="375" height="175" class="box"/>
+    <text x="952" y="417" text-anchor="middle" class="section">Stress test</text>
+    <text x="952" y="454" text-anchor="middle" class="label">leave-one-speed-level-out R² = -0.201</text>
+    <text x="952" y="491" text-anchor="middle" class="small">RMSE improves, but R² remains negative</text>
+    <text x="952" y="521" text-anchor="middle" class="label">Unseen-speed extrapolation: unsupported</text>
+
+    <rect x="60" y="625" width="1080" height="62" rx="12" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="85" y="653" class="small">Bounded conclusion:</text>
+    <text x="85" y="677" class="label">Sensing carries useful information about final geometry inside the sampled process window; general extrapolation is not established.</text>
+  
+</svg>

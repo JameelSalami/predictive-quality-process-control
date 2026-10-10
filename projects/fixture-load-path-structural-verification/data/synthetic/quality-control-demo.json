@@ -1,0 +1,463 @@
+{
+  "schema": "manufacturing-quality.synthetic-demo/v1",
+  "purpose": "Demonstrate downstream MSA, stability, capability, SPC, and OCAP automation without attributing synthetic specifications or production behavior to the public DED dataset.",
+  "ctq": {
+    "id": "CTQ-SYNTH-WIDTH-01",
+    "name": "synthetic dimensional CTQ",
+    "unit": "mm",
+    "specificationRevision": "SPEC-DEMO-01",
+    "measurementSystemId": "MS-DEMO-CMM-01",
+    "lsl": 9.4,
+    "usl": 10.6,
+    "target": 10.0
+  },
+  "policy": {
+    "id": "QUALITY-DEMO-POLICY-01",
+    "msa": {
+      "maximumPercentStudyVariation": 10,
+      "minimumDistinctCategories": 5
+    },
+    "stability": {
+      "minimumBaselineObservations": 25,
+      "sigmaLimit": 3,
+      "sameSideRunLength": 8
+    },
+    "capability": {
+      "minimumCpk": 1.33,
+      "minimumPpk": 1.33,
+      "minimumObservations": 30
+    }
+  },
+  "msaObservations": [
+    {
+      "partId": "P01",
+      "operatorId": "OP-A",
+      "repeat": 1,
+      "value": 9.733
+    },
+    {
+      "partId": "P01",
+      "operatorId": "OP-A",
+      "repeat": 2,
+      "value": 9.741
+    },
+    {
+      "partId": "P01",
+      "operatorId": "OP-B",
+      "repeat": 1,
+      "value": 9.736
+    },
+    {
+      "partId": "P01",
+      "operatorId": "OP-B",
+      "repeat": 2,
+      "value": 9.744
+    },
+    {
+      "partId": "P01",
+      "operatorId": "OP-C",
+      "repeat": 1,
+      "value": 9.739
+    },
+    {
+      "partId": "P01",
+      "operatorId": "OP-C",
+      "repeat": 2,
+      "value": 9.747
+    },
+    {
+      "partId": "P02",
+      "operatorId": "OP-A",
+      "repeat": 1,
+      "value": 9.793
+    },
+    {
+      "partId": "P02",
+      "operatorId": "OP-A",
+      "repeat": 2,
+      "value": 9.801
+    },
+    {
+      "partId": "P02",
+      "operatorId": "OP-B",
+      "repeat": 1,
+      "value": 9.796
+    },
+    {
+      "partId": "P02",
+      "operatorId": "OP-B",
+      "repeat": 2,
+      "value": 9.804
+    },
+    {
+      "partId": "P02",
+      "operatorId": "OP-C",
+      "repeat": 1,
+      "value": 9.7997
+    },
+    {
+      "partId": "P02",
+      "operatorId": "OP-C",
+      "repeat": 2,
+      "value": 9.8077
+    },
+    {
+      "partId": "P03",
+      "operatorId": "OP-A",
+      "repeat": 1,
+      "value": 9.863
+    },
+    {
+      "partId": "P03",
+      "operatorId": "OP-A",
+      "repeat": 2,
+      "value": 9.871
+    },
+    {
+      "partId": "P03",
+      "operatorId": "OP-B",
+      "repeat": 1,
+      "value": 9.866
+    },
+    {
+      "partId": "P03",
+      "operatorId": "OP-B",
+      "repeat": 2,
+      "value": 9.874
+    },
+    {
+      "partId": "P03",
+      "operatorId": "OP-C",
+      "repeat": 1,
+      "value": 9.8683
+    },
+    {
+      "partId": "P03",
+      "operatorId": "OP-C",
+      "repeat": 2,
+      "value": 9.8763
+    },
+    {
+      "partId": "P04",
+      "operatorId": "OP-A",
+      "repeat": 1,
+      "value": 9.923
+    },
+    {
+      "partId": "P04",
+      "operatorId": "OP-A",
+      "repeat": 2,
+      "value": 9.931
+    },
+    {
+      "partId": "P04",
+      "operatorId": "OP-B",
+      "repeat": 1,
+      "value": 9.926
+    },
+    {
+      "partId": "P04",
+      "operatorId": "OP-B",
+      "repeat": 2,
+      "value": 9.934
+    },
+    {
+      "partId": "P04",
+      "operatorId": "OP-C",
+      "repeat": 1,
+      "value": 9.929
+    },
+    {
+      "partId": "P04",
+      "operatorId": "OP-C",
+      "repeat": 2,
+      "value": 9.937
+    },
+    {
+      "partId": "P05",
+      "operatorId": "OP-A",
+      "repeat": 1,
+      "value": 9.983
+    },
+    {
+      "partId": "P05",
+      "operatorId": "OP-A",
+      "repeat": 2,
+      "value": 9.991
+    },
+    {
+      "partId": "P05",
+      "operatorId": "OP-B",
+      "repeat": 1,
+      "value": 9.986
+    },
+    {
+      "partId": "P05",
+      "operatorId": "OP-B",
+      "repeat": 2,
+      "value": 9.994
+    },
+    {
+      "partId": "P05",
+      "operatorId": "OP-C",
+      "repeat": 1,
+      "value": 9.9897
+    },
+    {
+      "partId": "P05",
+      "operatorId": "OP-C",
+      "repeat": 2,
+      "value": 9.9977
+    },
+    {
+      "partId": "P06",
+      "operatorId": "OP-A",
+      "repeat": 1,
+      "value": 10.043
+    },
+    {
+      "partId": "P06",
+      "operatorId": "OP-A",
+      "repeat": 2,
+      "value": 10.051
+    },
+    {
+      "partId": "P06",
+      "operatorId": "OP-B",
+      "repeat": 1,
+      "value": 10.046
+    },
+    {
+      "partId": "P06",
+      "operatorId": "OP-B",
+      "repeat": 2,
+      "value": 10.054
+    },
+    {
+      "partId": "P06",
+      "operatorId": "OP-C",
+      "repeat": 1,
+      "value": 10.0483
+    },
+    {
+      "partId": "P06",
+      "operatorId": "OP-C",
+      "repeat": 2,
+      "value": 10.0563
+    },
+    {
+      "partId": "P07",
+      "operatorId": "OP-A",
+      "repeat": 1,
+      "value": 10.103
+    },
+    {
+      "partId": "P07",
+      "operatorId": "OP-A",
+      "repeat": 2,
+      "value": 10.111
+    },
+    {
+      "partId": "P07",
+      "operatorId": "OP-B",
+      "repeat": 1,
+      "value": 10.106
+    },
+    {
+      "partId": "P07",
+      "operatorId": "OP-B",
+      "repeat": 2,
+      "value": 10.114
+    },
+    {
+      "partId": "P07",
+      "operatorId": "OP-C",
+      "repeat": 1,
+      "value": 10.109
+    },
+    {
+      "partId": "P07",
+      "operatorId": "OP-C",
+      "repeat": 2,
+      "value": 10.117
+    },
+    {
+      "partId": "P08",
+      "operatorId": "OP-A",
+      "repeat": 1,
+      "value": 10.163
+    },
+    {
+      "partId": "P08",
+      "operatorId": "OP-A",
+      "repeat": 2,
+      "value": 10.171
+    },
+    {
+      "partId": "P08",
+      "operatorId": "OP-B",
+      "repeat": 1,
+      "value": 10.166
+    },
+    {
+      "partId": "P08",
+      "operatorId": "OP-B",
+      "repeat": 2,
+      "value": 10.174
+    },
+    {
+      "partId": "P08",
+      "operatorId": "OP-C",
+      "repeat": 1,
+      "value": 10.1697
+    },
+    {
+      "partId": "P08",
+      "operatorId": "OP-C",
+      "repeat": 2,
+      "value": 10.1777
+    },
+    {
+      "partId": "P09",
+      "operatorId": "OP-A",
+      "repeat": 1,
+      "value": 10.223
+    },
+    {
+      "partId": "P09",
+      "operatorId": "OP-A",
+      "repeat": 2,
+      "value": 10.231
+    },
+    {
+      "partId": "P09",
+      "operatorId": "OP-B",
+      "repeat": 1,
+      "value": 10.226
+    },
+    {
+      "partId": "P09",
+      "operatorId": "OP-B",
+      "repeat": 2,
+      "value": 10.234
+    },
+    {
+      "partId": "P09",
+      "operatorId": "OP-C",
+      "repeat": 1,
+      "value": 10.2283
+    },
+    {
+      "partId": "P09",
+      "operatorId": "OP-C",
+      "repeat": 2,
+      "value": 10.2363
+    },
+    {
+      "partId": "P10",
+      "operatorId": "OP-A",
+      "repeat": 1,
+      "value": 10.283
+    },
+    {
+      "partId": "P10",
+      "operatorId": "OP-A",
+      "repeat": 2,
+      "value": 10.291
+    },
+    {
+      "partId": "P10",
+      "operatorId": "OP-B",
+      "repeat": 1,
+      "value": 10.286
+    },
+    {
+      "partId": "P10",
+      "operatorId": "OP-B",
+      "repeat": 2,
+      "value": 10.294
+    },
+    {
+      "partId": "P10",
+      "operatorId": "OP-C",
+      "repeat": 1,
+      "value": 10.289
+    },
+    {
+      "partId": "P10",
+      "operatorId": "OP-C",
+      "repeat": 2,
+      "value": 10.297
+    }
+  ],
+  "baselineValues": [
+    9.92,
+    10.04,
+    9.98,
+    10.06,
+    9.95,
+    10.01,
+    10.07,
+    9.97,
+    10.02,
+    9.94,
+    10.05,
+    9.99,
+    10.03,
+    9.93,
+    10.08,
+    9.96,
+    9.94,
+    10.03,
+    9.99,
+    10.05,
+    9.93,
+    10.02,
+    10.06,
+    9.96,
+    10.01,
+    9.95,
+    10.07,
+    9.98,
+    10.04,
+    9.92,
+    10.05,
+    9.99
+  ],
+  "monitoringValues": [
+    9.97,
+    10.02,
+    9.99,
+    10.05,
+    9.96,
+    10.01,
+    10.06,
+    9.98,
+    10.26,
+    10.25,
+    10.27,
+    10.24,
+    10.28,
+    10.26,
+    10.23,
+    10.25
+  ],
+  "sampling": "one CTQ measurement per manufactured unit during synthetic Safe Launch demonstration",
+  "reactionPlan": {
+    "owner": "manufacturing-quality-engineer",
+    "containment": [
+      "identify and quarantine product since last known-good control point",
+      "preserve run/lot/tool/measurement provenance"
+    ],
+    "stopCondition": "stop the synthetic process when a special-cause signal is confirmed by the declared control rule",
+    "restoreControl": [
+      "investigate assignable cause",
+      "correct process condition",
+      "verify measurement system remains qualified"
+    ],
+    "requalification": [
+      "collect a fresh stable baseline after corrective action",
+      "reassess capability before returning to normal control"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import {createHash} from "node:crypto";
+import {readFileSync} from "node:fs";
+import {resolve} from "node:path";
+import {analyzeDed,parseDedCsv} from "../src/ded-process.js";
+const p=resolve("projects/fixture-load-path-structural-verification");
+const csv=resolve(p,"data/public/zenodo-ded-powder/paired-track-observations.csv");
+test("DED lane binds 23 same-track process/IR/physical observations",()=>{const a=analyzeDed(parseDedCsv(readFileSync(csv,"utf8")));assert.equal(a.observations,23);assert.equal(a.alignedIrFrames,4905);assert.ok(a.maximumLaserMeanRelativeDeviation<0.06);assert.ok(a.maximumTcpMeanRelativeDeviation<0.034);});
+test("IR improves held-out width prediction within the curated window",()=>{const a=analyzeDed(parseDedCsv(readFileSync(csv,"utf8")));assert.ok(Math.abs(a.primary.recipeOnly.rmseMm-0.46832074830678644)<1e-9);assert.ok(Math.abs(a.primary.recipePlusIr.rmseMm-0.42785748024260306)<1e-9);assert.ok(Math.abs(a.primary.recipeOnly.r2-0.2495065384713654)<1e-9);assert.ok(Math.abs(a.primary.recipePlusIr.r2-0.3735904456387824)<1e-9);assert.equal(a.primary.irAddsPredictiveValue,true);});
+test("unseen-speed extrapolation remains unsupported",()=>{const a=analyzeDed(parseDedCsv(readFileSync(csv,"utf8")));assert.ok(a.stress.recipePlusIr.r2<0);assert.equal(a.stress.unseenSpeedExtrapolationSupported,false);});
+test("pairing fails closed on capture mismatch",()=>{const rows=[...parseDedCsv(readFileSync(csv,"utf8"))];rows[0]={...rows[0]!,capture:rows[0]!.capture+1};assert.throws(()=>analyzeDed(rows),/track\/capture identity mismatch/);});
+test("DED receipt is current",()=>{const rec=JSON.parse(readFileSync(resolve(p,"evidence/receipts/ded-process-prediction.json"),"utf8"));const sha=(x:string)=>"sha256:"+createHash("sha256").update(readFileSync(x)).digest("hex");assert.equal(rec.resultSha256,sha(resolve(p,"data/ded-process-prediction.json")));assert.equal(rec.pairedCsvSha256,sha(csv));assert.equal(rec.checks.primaryIrRmseLowerThanRecipe,true);assert.equal(rec.checks.unseenSpeedExtrapolationSupported,false);assert.equal(rec.checks.cpkPpkClaim,false);});

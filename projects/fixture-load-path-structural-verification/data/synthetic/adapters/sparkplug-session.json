@@ -1,0 +1,51 @@
+{
+  "messages": [
+    {
+      "topic": "spBv1.0/DED/NBIRTH/edge-1",
+      "payload": {
+        "timestamp": 1791082980000,
+        "seq": 0,
+        "metrics": [
+          {
+            "name": "bdSeq",
+            "value": 7
+          },
+          {
+            "name": "Node Control/Rebirth",
+            "value": false
+          },
+          {
+            "name": "cell/state",
+            "value": 1
+          }
+        ]
+      }
+    },
+    {
+      "topic": "spBv1.0/DED/DBIRTH/edge-1/camera-1",
+      "payload": {
+        "timestamp": 1791082980100,
+        "seq": 1,
+        "metrics": [
+          {
+            "name": "camera/active",
+            "value": 1
+          }
+        ]
+      }
+    },
+    {
+      "topic": "spBv1.0/DED/DDATA/edge-1/camera-1",
+      "payload": {
+        "timestamp": 1791082980200,
+        "seq": 2,
+        "metrics": [
+          {
+            "name": "ir/intensity",
+            "value": 174200
+          }
+        ]
+      }
+    }
+  ]
+}

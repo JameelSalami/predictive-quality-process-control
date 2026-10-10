@@ -1,0 +1,25 @@
+{
+  "namespaceArray": [
+    "http://opcfoundation.org/UA/",
+    "urn:vendor:companion",
+    "urn:factory:line-a"
+  ],
+  "nodeRef": {
+    "namespaceUri": "urn:factory:line-a",
+    "idType": "s",
+    "identifier": "DED/Process/LaserPower"
+  },
+  "dataValue": {
+    "value": 1007.2,
+    "statusCode": 0,
+    "sourceTimestamp": "2026-10-03T23:02:00-04:00",
+    "serverTimestamp": "2026-10-03T23:02:00.010-04:00"
+  },
+  "context": {
+    "sourceSystem": "recorded-opcua-line-a",
+    "channelId": "laser-power",
+    "unit": "W",
+    "runId": "RUN-1000W-028",
+    "unitId": "TRACK-028"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "analytical": {
+    "displacementAtLoadMm": -1.590860648392731,
+    "integrationMethod": "adaptive Simpson split at profile vertices and circular-hole tangencies",
+    "massKg": 0.09368411641459903,
+    "maxNominalBendingStressMPa": 66.66666666666667,
+    "maxStressXMm": 18.0,
+    "planformAreaMm2": 5782.9701490493235,
+    "reactionForceN": 100.0,
+    "reactionMomentNmm": 13200.0,
+    "volumeMm3": 34697.82089429594
+  },
+  "authority": "verification",
+  "checks": {
+    "allChecksPassed": true,
+    "analyticalImplementationIndependent": true,
+    "geometryArithmeticIndependent": true,
+    "physicalValidation": false,
+    "rawSolverOutputsReparsed": true
+  },
+  "comparison": {
+    "analyticalToFinestRelativeDeviation": 0.07385742867734624,
+    "displacementRelativeChange": 0.0006542701095358078,
+    "maximumForceBalanceErrorN": 3.370000003144469e-5
+  },
+  "configSha256": "sha256:dba40dabc7d7178985270cf7c8f59b3741fd034aaea74f578fd934b89a56666a",
+  "geometryDigest": "sha256:a491b39d67bec75700ab41f1079b3722ab2252324c7c19e476ad6584d7837896",
+  "juliaManifestSha256": "sha256:38e3caf10a2404e3eb51341f91f2f4763a4248e088f0e3f1739c5a0e7c201d0d",
+  "juliaProjectSha256": "sha256:4d6d5535caa1313496fa0c5b88a9cf60480f4b38825fa42208f2ec9281bd8042",
+  "juliaSourceSha256": "sha256:6f3294bac446b6648b266ba69c2c2dc448257e58061c7bba45ee8075462317da",
+  "juliaVersion": "1.13.0",
+  "numerical": [
+    {
+      "datSha256": "sha256:0a6782e308173888a2728aff2733e69d06883b6854ef4cfd280dcd6b7392593b",
+      "deckSha256": "sha256:1859f03f42cf0ffea9aac3df887144b3320eb3ab289e6e47559a4f0d17af129e",
+      "forceBalanceErrorN": 3.370000003144469e-5,
+      "loadAverageUzMm": -1.4768430875000003,
+      "loadNodeCount": 80,
+      "maxIntegrationPointVonMisesMPa": 55.60398168036519,
+      "meshSizeMm": 8.0,
+      "mountNodeCount": 160,
+      "reactionSumZN": 99.99996629999997
+    },
+    {
+      "datSha256": "sha256:1c9f50c67f1dbbc5157ee17e3f0254399527ab51627923ebd0020b888d906ea4",
+      "deckSha256": "sha256:984467c94c11e3d6751cefd646a9c3536131a5b6cf6ba6e52456341b835e93ca",
+      "forceBalanceErrorN": 1.4920000239726505e-5,
+      "loadAverageUzMm": -1.4804756696428572,
+      "loadNodeCount": 112,
+      "maxIntegrationPointVonMisesMPa": 61.302448091146594,
+      "meshSizeMm": 5.0,
+      "mountNodeCount": 256,
+      "reactionSumZN": 100.00001492000024
+    },
+    {
+      "datSha256": "sha256:a1ad3d5882bd227874cca9af33a87d705328992cdf6ed2386b407389763df235",
+      "deckSha256": "sha256:80903ae5ee067f15646515e7e511797b585cff6e91dd727d6ad970e2d9c34094",
+      "forceBalanceErrorN": 4.699999180957093e-7,
+      "loadAverageUzMm": -1.4814449347826086,
+      "loadNodeCount": 184,
+      "maxIntegrationPointVonMisesMPa": 62.803479089589054,
+      "meshSizeMm": 3.5,
+      "mountNodeCount": 256,
+      "reactionSumZN": 99.99999953000008
+    }
+  ],
+  "schema": "fixture-structural.julia-crosscheck/v1",
+  "typescriptResultSha256": "sha256:831a11ce97eb3403b100e4fe79ce07b557e64d86c0d8717716a3c9bf5c27c773"
+}

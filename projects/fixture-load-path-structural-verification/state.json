@@ -1,0 +1,1070 @@
+{
+  "schemaVersion": 2,
+  "projectSlug": "fixture-load-path-structural-verification",
+  "evidence": [
+    {
+      "id": "SRC-ASME-VV10",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://www.asme.org/codes-standards/find-codes-standards/standard-for-verification-and-validation-in-computational-solid-mechanics/2019",
+      "note": "ASME V&V 10 framework for computational solid-mechanics verification and validation."
+    },
+    {
+      "id": "SRC-NAFEMS-CREDIBILITY",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://www.nafems.org/training/learning-hub/introduction-to-simulation-credibility/",
+      "note": "NAFEMS public simulation-credibility material distinguishing solution verification, validation, and model-form uncertainty."
+    },
+    {
+      "id": "SRC-HEMPHILL-EDGES",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://faculty.etsu.edu/hemphill/pdf/ETSU_Standards-CADD_CAM_CNC-Latest_Rev.pdf",
+      "note": "ETSU CADD/CAM/CNC standard: design from product edges before deriving downstream toolpaths."
+    },
+    {
+      "id": "SRC-GMSH",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://gmsh.info/doc/texinfo/",
+      "note": "Gmsh 4.15.2 reference documentation for 3-D and second-order mesh generation."
+    },
+    {
+      "id": "SRC-CALCULIX",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://dhondt.de/",
+      "note": "Official CalculiX site; version 2.23 and solver documentation."
+    },
+    {
+      "id": "SRC-JULIA",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://julialang.org/downloads/",
+      "note": "Official Julia distribution source for Julia 1.13.0 used by the independent numerical cross-check."
+    },
+    {
+      "id": "SRC-NIST-AMB2022-CAD",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://doi.org/10.18434/mds2-2607",
+      "note": "NIST AMB2022-01 nominal CAD/build description dataset; canonical individual-part STEP identity is retained in the local source manifest."
+    },
+    {
+      "id": "SRC-NIST-AMB2022-MEAS",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://doi.org/10.18434/mds2-2711",
+      "note": "NIST AMB2022-01 residual-stress and part-deflection physical measurement dataset."
+    },
+    {
+      "id": "SRC-NIST-AMB2022-PAPER",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://www.nist.gov/publications/part-deflection-measurements-am-bench-in718-3d-build-artifacts",
+      "note": "Published CMM method and exact initial/cut/deflection tables with expanded uncertainty for specimen AMB2022-718-AMMT-B7-P2."
+    },
+    {
+      "id": "SRC-NIST-AMB2022-THERM",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://doi.org/10.18434/mds2-2715",
+      "note": "NIST AMB2022-01 in-situ thermography dataset with time-above-melting and solid-cooling-rate derived data/products."
+    },
+    {
+      "id": "SRC-NIST-AMB2022-BENCH",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://www.nist.gov/ambench/amb2022-01-benchmark-measurements-and-challenge-problems",
+      "note": "NIST AMB2022-01 benchmark definition: Part 1 is the thermography part; TAM/SCR are location-specific in-process metrics."
+    },
+    {
+      "id": "SRC-ZENODO-DED",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://doi.org/10.5281/zenodo.19727700",
+      "note": "Open CC BY 4.0 DED-LB Ti-6Al-4V powder dataset with commanded parameters, process monitoring, IR camera frames, and track-numbered metallographic macrographs."
+    },
+    {
+      "id": "SRC-AIAG-MSA",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://www.aiag.org/training-and-resources/manuals/details/MSA-4",
+      "note": "AIAG Measurement Systems Analysis 4th Edition overview: measurement-data quality must be assessed before decisions rely on it."
+    },
+    {
+      "id": "SRC-AIAG-CP1",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://www.aiag.org/training-and-resources/manuals/details/CP-1",
+      "note": "AIAG Control Plan 1st Edition overview including software-managed control plans, automated manufacturing examples, and reaction-plan guidance."
+    },
+    {
+      "id": "SRC-AIAG-VDA-SPC",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://www.aiag.org/training-and-resources/manuals/details/SPCAV-1",
+      "note": "2026 AIAG/VDA SPC overview describing a harmonized control-loop approach connecting monitoring, capability, process knowledge, and Control Plan execution."
+    },
+    {
+      "id": "SRC-NIST-SPC",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://www.itl.nist.gov/div898/handbook/pmc/pmc.htm",
+      "note": "NIST Engineering Statistics Handbook guidance on control charts, process stability, capability, and the distinction between control and specification limits."
+    },
+    {
+      "id": "SRC-ISO-STEP-P21",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://www.iso.org/standard/63141.html",
+      "note": "ISO 10303-21:2016 clear-text exchange structure for STEP product data."
+    },
+    {
+      "id": "SRC-ISO-AP242",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://www.iso.org/standard/84300.html",
+      "note": "ISO 10303-242:2025 AP242 managed model-based 3D engineering application protocol."
+    },
+    {
+      "id": "SRC-QIF3",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://qifstandards.org/",
+      "note": "DMSC QIF 3.0 / ISO 23952:2020 XML quality-information framework."
+    },
+    {
+      "id": "SRC-OPCUA-NODEID",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://reference.opcfoundation.org/specs/OPC-10000-3/8.2",
+      "note": "OPC UA NodeId definition and namespace-URI semantics."
+    },
+    {
+      "id": "SRC-OPCUA-DATAVALUE",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://reference.opcfoundation.org/specs/OPC-10000-4/7",
+      "note": "OPC UA DataValue fields and StatusCode semantics."
+    },
+    {
+      "id": "SRC-MTCONNECT-25",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://docs.mtconnect.org/MBSD_MTConnect_Part_1_2-5-0.pdf",
+      "note": "MTConnect 2.5 Agent response and sequence-cursor semantics."
+    },
+    {
+      "id": "SRC-SPARKPLUG-30",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://sparkplug.eclipse.org/specification/version/3.0/documents/sparkplug-specification-3.0.0.pdf",
+      "note": "Eclipse Sparkplug 3.0 MQTT topic namespace, payload, birth, and session-state rules."
+    },
+    {
+      "id": "SRC-NASTRAN-FILES",
+      "kind": "source",
+      "authority": "public-primary",
+      "value": "https://nexus.hexagon.com/documentationcenter/en-US/bundle/MSC_Nastran_2026.1.1/page/Nastran/Linear_Static_Analysis_User_Guide/Organization_of_MSC_Nastran_Files/9_Overview_MSC_Nastran_OpFiles.htm",
+      "note": "MSC Nastran DAT/BDF input and F06/PCH/OP2/H5 output-file boundaries."
+    },
+    {
+      "id": "EV-CONFIG",
+      "kind": "dataset",
+      "authority": "synthetic",
+      "value": "analysis/config.json",
+      "note": "Frozen synthetic geometry, material, load case, mesh ladder, and model-verification criteria."
+    },
+    {
+      "id": "EV-STRUCTURAL-RUN",
+      "kind": "solver-result",
+      "authority": "verification",
+      "value": "data/structural-analysis.json",
+      "note": "Geometry-derived analytical projection plus three-level Gmsh/CalculiX linear-static solid-model results."
+    },
+    {
+      "id": "EV-STRUCTURAL-RECEIPT",
+      "kind": "command",
+      "authority": "verification",
+      "value": "evidence/receipts/structural-analysis-run.json",
+      "note": "Binds geometry digest, tool versions, mesh/deck identities, and numerical results."
+    },
+    {
+      "id": "EV-LIFECYCLE",
+      "kind": "artifact",
+      "authority": "verification",
+      "value": "evidence/study-lifecycle.json",
+      "note": "XState execution trace showing ordered geometry, analytical, numerical, comparison, and evidence phases; authority none."
+    },
+    {
+      "id": "EV-MEASUREMENT-PLAN",
+      "kind": "artifact",
+      "authority": "assumption",
+      "value": "MEASUREMENT_SYSTEM_PLAN.md",
+      "note": "Frozen future physical-correlation protocol and predeclared discrepancy decision bands; contains no observed physical results."
+    },
+    {
+      "id": "EV-JULIA-CROSSCHECK",
+      "kind": "test",
+      "authority": "verification",
+      "value": "evidence/receipts/julia-crosscheck.json",
+      "note": "Julia 1.13.0 independently reconstructs geometry/analytical mechanics and reparses raw CalculiX outputs; all declared cross-checks passed."
+    },
+    {
+      "id": "EV-AMB2022-MEASUREMENTS",
+      "kind": "dataset",
+      "authority": "public-primary",
+      "value": "data/public/amb2022-01/part-deflection.csv",
+      "note": "Normalized transcription of published NIST initial/cut ridge heights, release deflections, and expanded uncertainties for AMB2022-718-AMMT-B7-P2."
+    },
+    {
+      "id": "EV-AMB2022-ANALYSIS",
+      "kind": "statistical-result",
+      "authority": "verification",
+      "value": "data/amb2022-01-distortion-analysis.json",
+      "note": "Project-local deterministic recomputation and uncertainty-aware summary of the NIST physical ridge-deflection measurements."
+    },
+    {
+      "id": "EV-AMB2022-RECEIPT",
+      "kind": "command",
+      "authority": "verification",
+      "value": "evidence/receipts/amb2022-01-metrology.json",
+      "note": "Freshness/provenance receipt binding the normalized NIST table, source manifest, analysis, and optional checksum-verified local CAD."
+    },
+    {
+      "id": "EV-AMB2022-PROCESS-MANIFEST",
+      "kind": "dataset",
+      "authority": "public-primary",
+      "value": "data/public/amb2022-01/process-monitoring-manifest.json",
+      "note": "Source-bound in-process feature/identity manifest linking NIST thermography P1 and final CMM CTQ P2 without claiming they are paired."
+    },
+    {
+      "id": "EV-AMB2022-PROCESS-ASSESSMENT",
+      "kind": "statistical-result",
+      "authority": "verification",
+      "value": "data/amb2022-01-process-monitoring-assessment.json",
+      "note": "Deterministic eligibility assessment for using in-process TAM/SCR as predictors of final geometric CTQs."
+    },
+    {
+      "id": "EV-AMB2022-PROCESS-RECEIPT",
+      "kind": "command",
+      "authority": "verification",
+      "value": "evidence/receipts/amb2022-01-process-monitoring.json",
+      "note": "Freshness receipt proving specimen identity was checked and invalid cross-part regression remains blocked."
+    },
+    {
+      "id": "EV-DED-PAIRED",
+      "kind": "dataset",
+      "authority": "verification",
+      "value": "data/public/zenodo-ded-powder/paired-track-observations.csv",
+      "note": "Curated 23-track same-run table linking recipe, validated process capture identity, 4,905 laser-active IR frames, and project-derived physical cross-section CTQs."
+    },
+    {
+      "id": "EV-DED-RESULT",
+      "kind": "statistical-result",
+      "authority": "verification",
+      "value": "data/ded-process-prediction.json",
+      "note": "Deterministic held-out recipe-only versus recipe-plus-IR bead-width prediction analysis."
+    },
+    {
+      "id": "EV-DED-RECEIPT",
+      "kind": "command",
+      "authority": "verification",
+      "value": "evidence/receipts/ded-process-prediction.json",
+      "note": "Freshness receipt binding the curated paired table, source manifest, and prediction result."
+    },
+    {
+      "id": "EV-QUALITY-DEMO-INPUT",
+      "kind": "dataset",
+      "authority": "synthetic",
+      "value": "data/synthetic/quality-control-demo.json",
+      "note": "Synthetic-only MSA, specification, stable-baseline, monitoring-drift, policy, and reaction-plan fixture used solely to demonstrate downstream manufacturing-control workflow."
+    },
+    {
+      "id": "EV-QUALITY-WORKFLOW",
+      "kind": "statistical-result",
+      "authority": "verification",
+      "value": "data/quality-control-workflow.json",
+      "note": "Fail-closed real DED boundary plus synthetic MSA→stability→capability→SPC→OCAP workflow result."
+    },
+    {
+      "id": "EV-QUALITY-WORKFLOW-RECEIPT",
+      "kind": "command",
+      "authority": "verification",
+      "value": "evidence/receipts/quality-control-workflow.json",
+      "note": "Freshness receipt binding DED prediction, synthetic workflow input, and generated quality-control result."
+    },
+    {
+      "id": "EV-INTEGRATION-ADAPTER-ASSESSMENT",
+      "kind": "dataset",
+      "authority": "verification",
+      "value": "data/integration-adapter-assessment.json",
+      "note": "Deterministic normalization assessment for AP242, QIF, OPC UA, MTConnect, Sparkplug B, MES genealogy, CalculiX, and recorded Nastran compatibility fixtures."
+    },
+    {
+      "id": "EV-INTEGRATION-ADAPTER-RECEIPT",
+      "kind": "command",
+      "authority": "verification",
+      "value": "evidence/receipts/integration-adapter-assessment.json",
+      "note": "Freshness receipt binding all recorded adapter fixtures to the generated assessment and explicit non-certification boundary."
+    }
+  ],
+  "claims": [
+    {
+      "id": "CL-VVUQ-SEPARATION",
+      "kind": "reported-fact",
+      "confidence": "source-stated",
+      "text": "ASME V&V 10 and NAFEMS simulation-credibility guidance treat verification and validation as distinct activities used to assess and enhance computational-model credibility.",
+      "evidenceIds": [
+        "SRC-ASME-VV10",
+        "SRC-NAFEMS-CREDIBILITY"
+      ]
+    },
+    {
+      "id": "CL-EDGE-PRECEDENT",
+      "kind": "reported-fact",
+      "confidence": "source-stated",
+      "text": "ETSU's CADD/CAM/CNC standard teaches designing from desired product edges before deriving downstream toolpath geometry; this study adopts the transferable principle that analysis geometry is downstream of the frozen engineering geometry.",
+      "evidenceIds": [
+        "SRC-HEMPHILL-EDGES"
+      ]
+    },
+    {
+      "id": "CL-SYNTHETIC-INPUTS",
+      "kind": "assumption",
+      "confidence": "declared-assumption",
+      "text": "The fixture geometry, 100 N load, aluminum elastic properties, support idealization, and convergence thresholds are independently created screening inputs rather than employer or production data.",
+      "evidenceIds": [
+        "EV-CONFIG"
+      ]
+    },
+    {
+      "id": "CL-DISPLACEMENT-CONVERGENCE",
+      "kind": "derived",
+      "text": "Average load-hole transverse displacement changes from -1.480476 mm to -1.481445 mm between the two finest meshes, a 0.065% relative change, satisfying the predeclared 2% global-displacement mesh criterion.",
+      "evidenceIds": [
+        "EV-STRUCTURAL-RUN",
+        "EV-STRUCTURAL-RECEIPT"
+      ],
+      "method": "Three progressively finer Gmsh second-order tetrahedral meshes solved with CalculiX 2.23; compare average load-hole UZ.",
+      "reproducible": true
+    },
+    {
+      "id": "CL-ANALYTICAL-DEVIATION",
+      "kind": "derived",
+      "text": "The geometry-derived variable-section analytical projection predicts -1.590861 mm at the load point versus -1.481445 mm for the finest solid model, a 7.39% relative deviation under the declared nominal load path.",
+      "evidenceIds": [
+        "EV-STRUCTURAL-RUN",
+        "EV-CONFIG"
+      ],
+      "method": "Numerical Simpson integration of Euler-Bernoulli compliance using net section width derived from the same edge/hole geometry, compared with finest C3D10 solid model.",
+      "reproducible": true
+    },
+    {
+      "id": "CL-STRESS-NOT-YET-VERIFIED",
+      "kind": "derived",
+      "text": "Maximum integration-point von Mises stress rises across the mesh ladder (55.60 -> 61.30 -> 62.80 MPa), so this run does not establish a converged local peak-stress quantity.",
+      "evidenceIds": [
+        "EV-STRUCTURAL-RUN"
+      ],
+      "method": "Direct comparison of maximum CalculiX integration-point von Mises stress across the declared mesh ladder.",
+      "reproducible": true
+    },
+    {
+      "id": "CL-FORCE-BALANCE",
+      "kind": "derived",
+      "text": "Every numerical level closes applied-vs-support z-force equilibrium; the maximum absolute balance residual is 3.370e-5 N for the 100 N load.",
+      "evidenceIds": [
+        "EV-STRUCTURAL-RUN",
+        "EV-STRUCTURAL-RECEIPT"
+      ],
+      "method": "Sum CalculiX mounting-hole reaction-force output and compare with the exact distributed applied nodal load at each mesh level.",
+      "reproducible": true
+    },
+    {
+      "id": "CL-JULIA-CROSSCHECK",
+      "kind": "derived",
+      "text": "Julia 1.13.0 independently reproduces the geometry-derived analytical response at -1.590860648 mm, identifies the exact nominal stress maximum at the support plane, and reparses every raw CalculiX deck/result set to reproduce displacement, reaction, force-balance, and integration-point stress evidence.",
+      "evidenceIds": [
+        "EV-JULIA-CROSSCHECK",
+        "EV-STRUCTURAL-RUN",
+        "SRC-JULIA"
+      ],
+      "method": "Independent Julia implementation using adaptive integration plus direct parsing of the generated CalculiX input/result files.",
+      "reproducible": true
+    },
+    {
+      "id": "CL-AMB2022-PUBLISHED-MEASUREMENT",
+      "kind": "reported-fact",
+      "confidence": "source-stated",
+      "text": "NIST measured selected AMB2022-01 bridge ridges by tactile CMM before and after partial EDM release, using nearby build-plate regions in the reference strategy; published deflection is the cut-state ridge height minus the initial-state ridge height.",
+      "evidenceIds": [
+        "SRC-NIST-AMB2022-MEAS",
+        "SRC-NIST-AMB2022-PAPER",
+        "EV-AMB2022-MEASUREMENTS"
+      ]
+    },
+    {
+      "id": "CL-AMB2022-DISTORTION",
+      "kind": "derived",
+      "text": "For NIST specimen AMB2022-718-AMMT-B7-P2, the six published release deflections range from -0.0025 mm to 1.8088 mm, with the maximum magnitude at ridge 6.",
+      "evidenceIds": [
+        "EV-AMB2022-MEASUREMENTS",
+        "EV-AMB2022-ANALYSIS",
+        "SRC-NIST-AMB2022-PAPER"
+      ],
+      "method": "Recompute every published ridge deflection as cut height minus initial height, then summarize the six named measurements.",
+      "reproducible": true
+    },
+    {
+      "id": "CL-AMB2022-UNCERTAINTY",
+      "kind": "derived",
+      "text": "5 of 6 published ridge-deflection magnitudes exceed the reported 0.0043 mm expanded uncertainty (k=2); ridge 1 does not exceed that simple uncertainty screen.",
+      "evidenceIds": [
+        "EV-AMB2022-MEASUREMENTS",
+        "EV-AMB2022-ANALYSIS",
+        "SRC-NIST-AMB2022-PAPER"
+      ],
+      "method": "Compare each absolute published deflection with its reported expanded uncertainty without converting the comparison into a process-capability claim.",
+      "reproducible": true
+    },
+    {
+      "id": "CL-AMB2022-NO-CAPABILITY",
+      "kind": "derived",
+      "text": "The AMB2022-01 six-ridge physical case does not establish Cp/Cpk or production acceptance because it is a benchmark artifact without a product tolerance specification or production distribution.",
+      "evidenceIds": [
+        "EV-AMB2022-ANALYSIS",
+        "SRC-NIST-AMB2022-PAPER"
+      ],
+      "method": "Check whether the evidence contains both production-distribution data and engineering specification limits required for a process-capability interpretation; it does not.",
+      "reproducible": true
+    },
+    {
+      "id": "CL-AMB2022-INPROCESS-METRICS",
+      "kind": "reported-fact",
+      "confidence": "source-stated",
+      "text": "NIST AMB2022-01 provides in-situ thermography-derived location-specific time-above-melting (TAM) and solid-cooling-rate (SCR) quantities; the benchmark documentation identifies Part 1 as the thermography part.",
+      "evidenceIds": [
+        "SRC-NIST-AMB2022-THERM",
+        "SRC-NIST-AMB2022-BENCH",
+        "EV-AMB2022-PROCESS-MANIFEST"
+      ]
+    },
+    {
+      "id": "CL-AMB2022-NO-PAIRED-PREDICTOR",
+      "kind": "derived",
+      "text": "The current AMB2022-01 evidence is not eligible for a direct thermal-to-deflection predictor: the in-process thermography identity is B7-P1 while the published deflection CTQ is B7-P2, and no signal-to-ridge spatial registration is admitted.",
+      "evidenceIds": [
+        "EV-AMB2022-PROCESS-MANIFEST",
+        "EV-AMB2022-PROCESS-ASSESSMENT",
+        "SRC-NIST-AMB2022-BENCH"
+      ],
+      "method": "Parse build/part identities, require same physical specimen plus registered signal-to-CTQ geometry, and fail closed when either pairing requirement is absent.",
+      "reproducible": true
+    },
+    {
+      "id": "CL-DED-IR-IMPROVEMENT",
+      "kind": "derived",
+      "text": "On 23 evidence-clean same-track DED observations at 1000 W, adding active-frame IR features reduces leave-one-powder-flow-level-out bead-width RMSE from 0.4683 mm to 0.4279 mm (8.6% reduction) and raises pooled held-out R-squared from 0.250 to 0.374.",
+      "evidenceIds": [
+        "EV-DED-PAIRED",
+        "EV-DED-RESULT",
+        "EV-DED-RECEIPT",
+        "SRC-ZENODO-DED"
+      ],
+      "method": "Standardized ridge regression with fixed lambda=10; group-held-out comparison of recipe-only versus recipe plus two laser-active IR features.",
+      "reproducible": true
+    },
+    {
+      "id": "CL-DED-NO-EXTRAPOLATION",
+      "kind": "derived",
+      "text": "Leave-one-speed-level-out testing remains below zero held-out R-squared (-0.201), so the current model does not support extrapolation to unseen travel-speed levels.",
+      "evidenceIds": [
+        "EV-DED-RESULT"
+      ],
+      "method": "Hold out each commanded travel-speed level as an unseen group and evaluate the same fixed model family.",
+      "reproducible": true
+    },
+    {
+      "id": "CL-QUALITY-CONTROL-VS-SPEC",
+      "kind": "reported-fact",
+      "confidence": "source-stated",
+      "text": "NIST process-control guidance distinguishes statistically derived control limits from engineering specification limits and treats process stability as a prerequisite for capability interpretation; current AIAG/VDA SPC guidance likewise frames SPC as a connected control loop rather than an isolated chart.",
+      "evidenceIds": [
+        "SRC-NIST-SPC",
+        "SRC-AIAG-VDA-SPC",
+        "SRC-AIAG-CP1",
+        "SRC-AIAG-MSA"
+      ]
+    },
+    {
+      "id": "CL-QUALITY-REAL-BOUNDARY",
+      "kind": "derived",
+      "text": "The real DED treatment stops after within-window process-to-CTQ prediction: MSA is not assessable, capability is not assessable, and SPC is not active because the source lacks a crossed/equivalent measurement study, production population with engineering specifications, and qualified production time series.",
+      "evidenceIds": [
+        "EV-QUALITY-WORKFLOW",
+        "EV-DED-RESULT"
+      ],
+      "method": "Evaluate required downstream quality evidence as explicit typed gates and fail closed when prerequisites are missing.",
+      "reproducible": true
+    },
+    {
+      "id": "CL-QUALITY-SYNTHETIC-CONTROL",
+      "kind": "derived",
+      "text": "The synthetic downstream demonstration qualifies the declared measurement-system, stability, and capability gates, then detects its first special-cause signal at 10.26 mm while that observation remains inside the synthetic 9.4–10.6 mm specification; the OCAP lifecycle ends at requalificationRequired rather than automatic restart.",
+      "evidenceIds": [
+        "EV-QUALITY-DEMO-INPUT",
+        "EV-QUALITY-WORKFLOW",
+        "EV-QUALITY-WORKFLOW-RECEIPT"
+      ],
+      "method": "Crossed ANOVA Gage R&R; I-MR baseline; gated Cp/Cpk and Pp/Ppk; fixed-limit monitoring; XState containment/requalification lifecycle.",
+      "reproducible": true
+    },
+    {
+      "id": "CL-INTEGRATION-PROTOCOL-BOUNDARIES",
+      "kind": "reported-fact",
+      "confidence": "source-stated",
+      "text": "The selected interoperability boundaries match current primary specifications: STEP Part 21/AP242 for product exchange, QIF for quality/metrology information, OPC UA DataValue and namespace-qualified NodeIds for industrial data, MTConnect Agent sequence semantics for machine streams, Sparkplug B birth/session state over MQTT, and Nastran DAT/BDF/F06 family boundaries for CAE exchange.",
+      "evidenceIds": [
+        "SRC-ISO-STEP-P21",
+        "SRC-ISO-AP242",
+        "SRC-QIF3",
+        "SRC-OPCUA-NODEID",
+        "SRC-OPCUA-DATAVALUE",
+        "SRC-MTCONNECT-25",
+        "SRC-SPARKPLUG-30",
+        "SRC-NASTRAN-FILES"
+      ]
+    },
+    {
+      "id": "CL-INTEGRATION-ADAPTERS",
+      "kind": "derived",
+      "text": "The adapter suite normalizes AP242 product/revision identity, QIF characteristic measurements, OPC UA process values, MTConnect and Sparkplug process streams, MES unit/run/recipe genealogy, and CalculiX/Nastran structural outputs into vendor-neutral internal contracts while explicitly keeping live vendor certification false.",
+      "evidenceIds": [
+        "EV-INTEGRATION-ADAPTER-ASSESSMENT",
+        "EV-INTEGRATION-ADAPTER-RECEIPT"
+      ],
+      "method": "Run deterministic recorded/open-format fixtures through protocol-specific parsers and failure cases, then inspect one canonical assessment object and receipt.",
+      "reproducible": true
+    },
+    {
+      "id": "REC-NEXT-PHYSICAL",
+      "kind": "recommendation",
+      "text": "Lead the portfolio with the reusable predictive-quality and process-control workflow plus its interoperability layer: real DED evidence through process-to-CTQ prediction, explicit downstream quality gates, and vendor-neutral adapters for product definition, CAE, process signals, genealogy, and metrology. Keep vendor certification and synthetic capability boundaries explicit.",
+      "evidenceIds": [
+        "EV-DED-PAIRED",
+        "EV-DED-RESULT",
+        "EV-AMB2022-MEASUREMENTS",
+        "EV-STRUCTURAL-RUN"
+      ],
+      "basedOnClaimIds": [
+        "CL-DED-IR-IMPROVEMENT",
+        "CL-DED-NO-EXTRAPOLATION",
+        "CL-AMB2022-UNCERTAINTY"
+      ],
+      "authority": "proposal-only"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "M-E-NOMINAL-MASS",
+      "family": "economic",
+      "name": "nominal fixture mass as material/cost burden proxy",
+      "unit": "kg",
+      "direction": "minimize",
+      "hardConstraint": false,
+      "baseline": 0.09368411641459903,
+      "sourceOrFormula": "Edge-defined planform area minus circular holes, extruded thickness, synthetic density assumption."
+    },
+    {
+      "id": "M-H-TEST-REPOSITION",
+      "family": "human",
+      "name": "manual displacement-probe repositionings per validation load point",
+      "unit": "repositions/trial",
+      "direction": "minimize",
+      "hardConstraint": false,
+      "target": 0,
+      "sourceOrFormula": "Future physical-validation measurement-system design; no observed baseline yet."
+    },
+    {
+      "id": "M-ECO-NOMINAL-MASS",
+      "family": "ecological",
+      "name": "nominal material mass",
+      "unit": "kg",
+      "direction": "minimize",
+      "hardConstraint": false,
+      "baseline": 0.09368411641459903,
+      "sourceOrFormula": "Same nominal mass quantity viewed as material-use burden; no lifecycle/emissions claim."
+    }
+  ],
+  "hardConstraints": [
+    {
+      "id": "HC-CLEAN-ROOM",
+      "family": "data",
+      "statement": "Only public or independently created synthetic inputs may enter this study.",
+      "verification": "NOTICE.txt, source register, synthetic config, and repository review."
+    },
+    {
+      "id": "HC-NO-ADEQUACY-CLAIM",
+      "family": "safety",
+      "statement": "No solver result or analytical calculation may be represented as certified structural adequacy, life-safety approval, or production release.",
+      "verification": "Claim review and case-study limitations; physical validity requires separate correlation evidence."
+    },
+    {
+      "id": "HC-GEOMETRY-BINDING",
+      "family": "quality",
+      "statement": "Analytical and numerical projections must bind to the same frozen geometry/material/load revision.",
+      "verification": "Shared analysis/config.json and geometry digest in structural-analysis.json and structural-analysis-run.json."
+    },
+    {
+      "id": "HC-EXPLICIT-MODEL-LOSS",
+      "family": "quality",
+      "statement": "Every idealization or omitted physical mechanism must be explicit; no reduced model may silently replace the geometry or assembly behavior.",
+      "verification": "analysis/ARCHITECTURE.md, modelForm block, decision 0001, and verification plan."
+    },
+    {
+      "id": "HC-PHYSICAL-CORRELATION",
+      "family": "quality",
+      "statement": "No physical-validity claim is admitted before measured test data or a trusted public benchmark is compared to the bound model revision with uncertainty recorded.",
+      "verification": "evidence/verification-plan.md and future physical/benchmark receipt."
+    },
+    {
+      "id": "HC-QUALITY-GATE-ORDER",
+      "family": "quality",
+      "statement": "Capability and active SPC may not be represented as assessable before the measurement system and process baseline satisfy their declared qualification gates.",
+      "verification": "analysis/src/quality-system.ts, analysis/src/run-quality-system.ts, data/quality-control-workflow.json, and quality-system tests."
+    },
+    {
+      "id": "HC-WORKER-SAFE-TEST",
+      "family": "human",
+      "statement": "A future load test must use a bounded fixture and load application that does not require a person to hold or restrain the specimen during loading.",
+      "verification": "Future measurement-system and test-fixture plan before physical execution."
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H-GLOBAL-CONVERGENCE",
+      "statement": "The declared quadratic-solid model reaches a mesh-stable global load-hole displacement under the frozen rigid-hole support/load idealization.",
+      "status": "supported",
+      "falsification": "Reject if progressive mesh refinement changes average load-hole transverse displacement by more than the predeclared 2% criterion.",
+      "evidenceIds": [
+        "EV-STRUCTURAL-RUN"
+      ]
+    },
+    {
+      "id": "H-ANALYTICAL-GLOBAL",
+      "statement": "A geometry-derived variable-section Euler-Bernoulli projection predicts global load-hole displacement within the predeclared 20% diagnostic band of the finest solid model under the same nominal load path.",
+      "status": "supported",
+      "falsification": "Reject if analytical-to-finest-FEA displacement deviation exceeds 20% for the frozen model revision.",
+      "evidenceIds": [
+        "EV-STRUCTURAL-RUN"
+      ]
+    },
+    {
+      "id": "H-LOCAL-STRESS",
+      "statement": "The present mesh sequence is sufficient to make a stable local peak-stress claim near holes/support features.",
+      "status": "inconclusive",
+      "falsification": "Support only after a stress-focused refinement/error study demonstrates stability at the declared region and quantity.",
+      "evidenceIds": [
+        "EV-STRUCTURAL-RUN"
+      ]
+    },
+    {
+      "id": "H-JOINT-COMPLIANCE",
+      "statement": "The as-built bolted/base fixture will be more compliant than the current rigid-hole numerical idealization, making interface/base compliance a likely source of future prediction-to-test discrepancy.",
+      "status": "open",
+      "falsification": "Reject if a controlled physical test with measured setup geometry shows equal or lower displacement than the bound rigid-hole prediction within measurement uncertainty.",
+      "evidenceIds": []
+    },
+    {
+      "id": "H-AMB2022-RELEASE-DISTORTION",
+      "statement": "At least five of the six published AMB2022-01 ridge release-deflection magnitudes exceed their reported expanded uncertainty for specimen AMB2022-718-AMMT-B7-P2.",
+      "status": "supported",
+      "falsification": "Reject if deterministic recomputation from the published initial/cut heights and uncertainty table yields fewer than five ridge magnitudes above the reported expanded uncertainty.",
+      "evidenceIds": [
+        "EV-AMB2022-MEASUREMENTS",
+        "EV-AMB2022-ANALYSIS"
+      ]
+    },
+    {
+      "id": "H-AMB2022-INLINE-CTQ-PAIRING",
+      "statement": "The currently identified AMB2022-01 in-process thermal features can be treated as paired predictors of the published ridge-deflection CTQ.",
+      "status": "inconclusive",
+      "falsification": "Support only when thermal signals and final CTQ are from the same physical part and the signal locations are registered to the measured CTQ features.",
+      "evidenceIds": [
+        "EV-AMB2022-PROCESS-ASSESSMENT",
+        "SRC-NIST-AMB2022-THERM",
+        "SRC-NIST-AMB2022-BENCH"
+      ]
+    },
+    {
+      "id": "H-DED-IR-PREDICTIVE",
+      "statement": "Same-track in-process IR features improve held-out bead-width prediction relative to recipe-only inputs inside the curated DED process window.",
+      "status": "supported",
+      "falsification": "Reject if leave-one-powder-flow-level-out RMSE is not lower after adding the admitted active-frame IR features.",
+      "evidenceIds": [
+        "EV-DED-PAIRED",
+        "EV-DED-RESULT"
+      ]
+    },
+    {
+      "id": "H-DED-EXTRAPOLATION",
+      "statement": "The current DED model generalizes to an entirely unseen travel-speed level.",
+      "status": "inconclusive",
+      "falsification": "Support only if grouped holdout on travel-speed levels produces positive held-out R-squared with stable error.",
+      "evidenceIds": [
+        "EV-DED-RESULT"
+      ]
+    },
+    {
+      "id": "H-QUALITY-CONTROL-GATES",
+      "statement": "A reusable evidence-first workflow can block unsupported real-data capability claims while executing MSA, stability, capability, SPC, containment, and requalification on a clearly separated synthetic production stream.",
+      "status": "supported",
+      "falsification": "Reject if the real DED path reaches capability/SPC without the missing evidence, or if the synthetic gate chain bypasses MSA/stability or fails to require requalification after the special-cause event.",
+      "evidenceIds": [
+        "EV-QUALITY-WORKFLOW",
+        "EV-QUALITY-WORKFLOW-RECEIPT"
+      ]
+    },
+    {
+      "id": "H-INTEGRATION-ADAPTERS",
+      "statement": "External product, process, metrology, genealogy, and solver formats can be normalized into canonical engineering identities without coupling the analytical core to one vendor.",
+      "status": "supported",
+      "falsification": "Reject if any adapter loses revision/genealogy/session identity, accepts invalid protocol state, or requires vendor-specific types in the analytical core.",
+      "evidenceIds": [
+        "EV-INTEGRATION-ADAPTER-ASSESSMENT",
+        "EV-INTEGRATION-ADAPTER-RECEIPT"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "schema": "ci-research.record/v1",
+      "id": "REC-PROBLEM-FRAME",
+      "kind": "problem-frame",
+      "evidenceIds": [
+        "EV-CONFIG"
+      ],
+      "payload": {
+        "schema": "ci-research.problem-frame/v1",
+        "problemId": 15,
+        "question": "How should geometry and process parameters change together to improve CNC, additive, assembly, inspection, maintenance, and end-of-life outcomes?",
+        "metricIds": [
+          "M-E-NOMINAL-MASS",
+          "M-ECO-NOMINAL-MASS",
+          "M-H-TEST-REPOSITION"
+        ],
+        "hardConstraintIds": [
+          "HC-CLEAN-ROOM",
+          "HC-EXPLICIT-MODEL-LOSS",
+          "HC-GEOMETRY-BINDING",
+          "HC-NO-ADEQUACY-CLAIM",
+          "HC-PHYSICAL-CORRELATION",
+          "HC-QUALITY-GATE-ORDER",
+          "HC-WORKER-SAFE-TEST"
+        ],
+        "lensCoverage": {
+          "economic": true,
+          "human": true,
+          "ecological": true
+        },
+        "authority": "none"
+      },
+      "digest": "sha256:620f6e9ba9216c5213960cf683acae95188cf5046afad7df4065e5c8e9b8b20d"
+    },
+    {
+      "schema": "ci-research.record/v1",
+      "id": "REC-STRUCTURAL-VERIFICATION",
+      "kind": "verification-receipt",
+      "evidenceIds": [
+        "EV-JULIA-CROSSCHECK",
+        "EV-STRUCTURAL-RECEIPT",
+        "EV-STRUCTURAL-RUN"
+      ],
+      "payload": {
+        "schema": "fixture-structural.verification-summary/v1",
+        "geometryDigest": "sha256:a491b39d67bec75700ab41f1079b3722ab2252324c7c19e476ad6584d7837896",
+        "displacementRelativeChange": 0.0006542701095361075,
+        "displacementConverged": true,
+        "analyticalToFinestRelativeDeviation": 0.07385733234449583,
+        "analyticalAgreementWithinDeclaredBand": true,
+        "maximumForceBalanceErrorN": 0.00003370000003144469,
+        "independentJuliaCrosscheck": true,
+        "juliaAnalyticalDisplacementMm": -1.590860648392731,
+        "juliaAnalyticalDifferenceMm": 1.427118128116689e-7,
+        "physicalValidation": false,
+        "localPeakStressConvergenceClaim": false,
+        "authority": "none"
+      },
+      "digest": "sha256:055c3c801ef27db64f479cbd87333d4a5c10dd9d8dacc9b88307166ba77a9fe0"
+    },
+    {
+      "schema": "ci-research.record/v1",
+      "id": "REC-AMB2022-METROLOGY",
+      "kind": "verification-receipt",
+      "evidenceIds": [
+        "EV-AMB2022-ANALYSIS",
+        "EV-AMB2022-MEASUREMENTS",
+        "EV-AMB2022-RECEIPT"
+      ],
+      "payload": {
+        "schema": "fixture-structural.amb2022-metrology-summary/v1",
+        "benchmark": "AMB2022-01-PD",
+        "specimen": "AMB2022-718-AMMT-B7-P2",
+        "maximumAbsoluteDeflectionMm": 1.8088,
+        "maximumAbsoluteDeflectionRidge": 6,
+        "rmsDeflectionMm": 0.8849746455878459,
+        "deflectionRangeMm": 1.8113,
+        "resolvedRidgeCount": 5,
+        "maximumExpandedUncertaintyMm": 0.0043,
+        "physicalObservationEvidence": true,
+        "projectPerformedMeasurement": false,
+        "syntheticFixturePhysicalValidation": false,
+        "processCapabilityClaim": false,
+        "authority": "none"
+      },
+      "digest": "sha256:eda173b9984f69c9dc5b5b4ff097c4602fbacd271c24f7d2928305dbbf467b37"
+    },
+    {
+      "schema": "ci-research.record/v1",
+      "id": "REC-AMB2022-PROCESS-MONITORING",
+      "kind": "verification-receipt",
+      "evidenceIds": [
+        "EV-AMB2022-PROCESS-ASSESSMENT",
+        "EV-AMB2022-PROCESS-MANIFEST",
+        "EV-AMB2022-PROCESS-RECEIPT"
+      ],
+      "payload": {
+        "schema": "fixture-structural.amb2022-process-monitoring-summary/v1",
+        "status": "cross-stage-unpaired",
+        "inProcessFeatures": [
+          "TAM",
+          "SCR"
+        ],
+        "inProcessObservationAvailable": true,
+        "finalCtqAvailable": true,
+        "sameBuild": true,
+        "samePhysicalPart": false,
+        "spatialFeatureRegistrationAvailable": false,
+        "pairedPredictionAssessable": false,
+        "processCapabilityAssessable": false,
+        "gateReasons": [
+          "signals-and-ctq-are-different-physical-parts",
+          "no-signal-to-ctq-spatial-registration"
+        ],
+        "authority": "none"
+      },
+      "digest": "sha256:e378dfe292ea96fba8418244ebc95143d51ee60faeeb33ff4b002729c686ec0c"
+    },
+    {
+      "schema": "ci-research.record/v1",
+      "id": "REC-DED-PROCESS-PREDICTION",
+      "kind": "verification-receipt",
+      "evidenceIds": [
+        "EV-DED-PAIRED",
+        "EV-DED-RECEIPT",
+        "EV-DED-RESULT"
+      ],
+      "payload": {
+        "schema": "fixture-structural.ded-process-prediction-summary/v1",
+        "observations": 23,
+        "alignedIrFrames": 4905,
+        "recipeOnlyRmseMm": 0.46832074830678644,
+        "recipePlusIrRmseMm": 0.42785748024260317,
+        "relativeRmseReduction": 0.0864007589039738,
+        "recipeOnlyR2": 0.2495065384713654,
+        "recipePlusIrR2": 0.3735904456387821,
+        "unseenSpeedR2": -0.20114725867550853,
+        "unseenSpeedExtrapolationSupported": false,
+        "cpkPpkClaim": false,
+        "authority": "none"
+      },
+      "digest": "sha256:b595ec885f0652bd89af1b3090978d5930de80fba4d18b269bd983ffc767ae8d"
+    },
+    {
+      "schema": "ci-research.record/v1",
+      "id": "REC-QUALITY-CONTROL-WORKFLOW",
+      "kind": "verification-receipt",
+      "evidenceIds": [
+        "EV-QUALITY-DEMO-INPUT",
+        "EV-QUALITY-WORKFLOW",
+        "EV-QUALITY-WORKFLOW-RECEIPT"
+      ],
+      "payload": {
+        "schema": "manufacturing-quality.control-workflow-summary/v1",
+        "realDed": {
+          "sourceResult": "data/ded-process-prediction.json",
+          "prediction": {
+            "status": "supported-within-window",
+            "recipeOnlyRmseMm": 0.46832074830678644,
+            "recipePlusIrRmseMm": 0.42785748024260317
+          },
+          "msa": {
+            "status": "not-assessable",
+            "reasons": [
+              "no-crossed-or-equivalent-measurement-system-study"
+            ]
+          },
+          "capability": {
+            "status": "not-assessable",
+            "reasons": [
+              "no-production-population",
+              "no-engineering-specification-limits"
+            ]
+          },
+          "spc": {
+            "status": "not-active",
+            "reasons": [
+              "no-qualified-production-time-series"
+            ]
+          }
+        },
+        "synthetic": {
+          "msaStatus": "qualified",
+          "percentStudyVariation": 3.4662338550983236,
+          "baselineStatus": "stable",
+          "cpk": 2.7411598039215836,
+          "ppk": 4.0135644671550414,
+          "monitoringStatus": "out-of-control",
+          "firstViolation": {
+            "index": 8,
+            "value": 10.26,
+            "rule": "outside-control-limit",
+            "detail": "above-UCL",
+            "withinSpecification": true
+          },
+          "lifecycleState": "requalificationRequired",
+          "ocapTriggered": true
+        },
+        "realDedCapabilityClaim": false,
+        "syntheticAuthorityOnly": true,
+        "authority": "none"
+      },
+      "digest": "sha256:fc53d1a6ba6883f006a2bea486a81d7bea1c2ad79b3a36d30c76cc481ac5072c"
+    },
+    {
+      "schema": "ci-research.record/v1",
+      "id": "REC-INTEGRATION-ADAPTERS",
+      "kind": "verification-receipt",
+      "evidenceIds": [
+        "EV-INTEGRATION-ADAPTER-ASSESSMENT",
+        "EV-INTEGRATION-ADAPTER-RECEIPT"
+      ],
+      "payload": {
+        "schema": "manufacturing-quality.integration-adapters-summary/v1",
+        "productDefinition": {
+          "protocol": "ISO 10303-21 / AP242",
+          "exchangeName": "fixture-arm-v1.step",
+          "schemas": [
+            "AP242_MANAGED_MODEL_BASED_3D_ENGINEERING_MIM_LF"
+          ],
+          "entityCount": 4,
+          "product": {
+            "productId": "fixture-arm-v1",
+            "revision": "A",
+            "sourceFormat": "ISO-10303-21",
+            "sourceName": "fixture-arm-v1.step",
+            "schemaIdentifiers": [
+              "AP242_MANAGED_MODEL_BASED_3D_ENGINEERING_MIM_LF"
+            ]
+          }
+        },
+        "metrology": {
+          "protocol": "QIF 3.x",
+          "versionQif": "3.0.0",
+          "qpId": "11111111-2222-3333-4444-555555555555",
+          "measurementCount": 1,
+          "firstMeasurement": {
+            "measurementId": "101",
+            "characteristicId": "42",
+            "actualComponentId": "7",
+            "measurementSystemId": "15",
+            "timestamp": "2026-10-03T23:01:00-04:00",
+            "value": 10.02,
+            "unit": "mm",
+            "combinedUncertainty": 0.01,
+            "status": "PASS"
+          }
+        },
+        "processSignals": {
+          "opcUaResolvedNodeId": "ns=2;s=DED/Process/LaserPower",
+          "mtconnectSignalCount": 2,
+          "sparkplugSignalCount": 1
+        },
+        "genealogy": {
+          "unitId": "TRACK-028",
+          "lotId": "POWDER-LOT-17",
+          "workOrderId": "WO-DEMO-1000W",
+          "runId": "RUN-1000W-028",
+          "recipeRevision": "DED-RECIPE-1000W-R3",
+          "equipmentId": "DED-CELL-A",
+          "startedAt": "2026-10-03T23:00:00-04:00",
+          "completedAt": "2026-10-03T23:04:00-04:00"
+        },
+        "structuralSolvers": {
+          "calculix": {
+            "solver": "CalculiX",
+            "analysisType": "linear static",
+            "inputFormat": "Abaqus INP / CalculiX deck",
+            "outputFormat": "DAT",
+            "nodeCount": 11236,
+            "loadAverageDisplacementMm": -1.481444934782609,
+            "supportReactionN": 99.99999953000008,
+            "maxVonMisesMPa": 62.803479089589054,
+            "availableQuantities": [
+              "nodal-displacement",
+              "support-reaction",
+              "force-balance",
+              "integration-point-von-mises"
+            ],
+            "provenance": {
+              "adapterId": "calculix-native",
+              "protocol": "CalculiX deck/DAT",
+              "standardVersion": "CalculiX 2.23",
+              "authority": "live-protocol",
+              "sourceSystem": "project-executed-calculix",
+              "conformanceClaim": "none"
+            }
+          },
+          "nastran": {
+            "solver": "MSC/NX-compatible Nastran",
+            "analysisType": "SOL 101",
+            "inputFormat": "BDF/DAT",
+            "outputFormat": "F06",
+            "nodeCount": 4,
+            "loadAverageDisplacementMm": -1.505,
+            "supportReactionN": null,
+            "maxVonMisesMPa": null,
+            "availableQuantities": [
+              "nodal-displacement"
+            ],
+            "provenance": {
+              "adapterId": "nastran-recorded-f06",
+              "protocol": "Nastran BDF/F06",
+              "standardVersion": "recorded compatibility fixture",
+              "authority": "compatibility-fixture",
+              "sourceSystem": "synthetic-nastran-fixture",
+              "conformanceClaim": "syntax-and-semantics-fixture"
+            }
+          }
+        },
+        "liveVendorCertification": false,
+        "sparkplugTckCertification": false,
+        "qifFullSchemaValidation": false,
+        "authority": "none"
+      },
+      "digest": "sha256:062e3015bb2efa9b2b5da766d9187dcb4f8300060fc94a5408cfca55801e5953"
+    }
+  ],
+  "verificationReceiptFiles": [
+    "evidence/receipts/structural-analysis-run.json",
+    "evidence/receipts/julia-crosscheck.json",
+    "evidence/receipts/amb2022-01-metrology.json",
+    "evidence/receipts/amb2022-01-process-monitoring.json",
+    "evidence/receipts/ded-process-prediction.json",
+    "evidence/receipts/quality-control-workflow.json",
+    "evidence/receipts/integration-adapter-assessment.json"
+  ]
+}

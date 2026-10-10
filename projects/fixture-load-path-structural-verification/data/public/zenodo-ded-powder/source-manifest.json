@@ -1,0 +1,46 @@
+{
+  "schema": "fixture-structural.zenodo-ded-powder-source/v1",
+  "source": {
+    "doi": "10.5281/zenodo.19727700",
+    "recordUrl": "https://zenodo.org/records/19727700",
+    "title": "Direct energy deposition by laser (DED-LB) of Ti-6Al-4V alloy powder Open Repository",
+    "publisher": "Zenodo",
+    "publicationDate": "2026-04-24",
+    "license": "CC BY 4.0",
+    "access": "open"
+  },
+  "rawArchives": [
+    {"name":"DED_LB_Powder_Ti_alloy_parameters.zip","bytes":882,"md5":"b32405839ad6e091c4cf0005861735b7","verifiedOnAcquisition":true},
+    {"name":"Macrographs_DED_LB_Powder_Ti_alloy.zip","bytes":20978232,"md5":"c44812f5b38a02f8202b2ebebff15676","verifiedOnAcquisition":true},
+    {"name":"Monitoring_DED_LB_Powder_Ti_alloy.zip","bytes":687210169,"md5":"78988ad4603b16bd396af366d49deabd","verifiedOnAcquisition":true}
+  ],
+  "pairing": {
+    "selectedTracks": "28-50",
+    "selectedTrackCount": 23,
+    "monitoringCaptureRule": "capture = track + 12",
+    "ruleAuthority": "project-inferred-and-validated",
+    "observedMaximumLaserMeanRelativeDeviation": 0.059713414634146374,
+    "observedMaximumTcpMeanRelativeDeviation": 0.03349999999999994
+  },
+  "physicalCtqExtraction": {
+    "source": "track-numbered metallographic cross-section JPEGs",
+    "calibration": "per-image 1 mm scale bar",
+    "ctqs": ["bead_width_mm","bead_height_mm","bead_area_mm2"],
+    "uncertaintyQuantified": false
+  },
+  "inProcessFeatureExtraction": {
+    "source": "track-matched IR camera frames plus VTK process data",
+    "timing": "camera frames restricted to the laser-active VTK interval",
+    "alignedFrameCount": 4905,
+    "modelFeatures": ["ir_diameter50_median_px","ir_intensity_sum_median"],
+    "absoluteTemperatureCalibrated": false
+  },
+  "modelBoundary": {
+    "target": "bead_width_mm",
+    "model": "standardized ridge regression with unpenalized intercept",
+    "ridgeLambda": 10,
+    "primaryEvaluation": "leave-one-powder-flow-level-out",
+    "stressEvaluation": "leave-one-speed-level-out",
+    "cpkPpkAllowed": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "predictive-quality-process-control",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Predictive quality, measurement qualification, capability, SPC and manufacturing evidence boundaries",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "verify": "npm run typecheck && npm run test:node",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run verify",
+    "test:node": "node --import tsx --test projects/fixture-load-path-structural-verification/analysis/test/*.test.ts",
+    "test:quality": "npm run test:node",
+    "analyze:ded": "node --import tsx projects/fixture-load-path-structural-verification/analysis/src/run-ded-process.ts",
+    "analyze:quality": "node --import tsx projects/fixture-load-path-structural-verification/analysis/src/run-quality-system.ts"
+  },
+  "dependencies": {
+    "archiver": "8.0.0",
+    "effect": "3.22.1",
+    "xstate": "5.33.2"
+  },
+  "devDependencies": {
+    "@types/archiver": "^6.0.3",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

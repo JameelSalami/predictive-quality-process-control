@@ -1,0 +1,120 @@
+{
+  "schema": "fixture-structural.amb2022-distortion-analysis/v1",
+  "benchmark": "AMB2022-01-PD",
+  "specimen": "AMB2022-718-AMMT-B7-P2",
+  "ridges": [
+    {
+      "ridge": 1,
+      "initialHeightMm": 11.9767,
+      "initialExpandedUncertaintyMm": 0.003,
+      "cutHeightMm": 11.9742,
+      "cutExpandedUncertaintyMm": 0.0031,
+      "publishedDeflectionMm": -0.0025,
+      "deflectionExpandedUncertaintyMm": 0.0043,
+      "recomputedDeflectionMm": -0.0024999999999995026,
+      "transcriptionErrorMm": 4.974319567363494e-16,
+      "absoluteDeflectionToExpandedUncertainty": 0.5813953488372093,
+      "resolvedBeyondExpandedUncertainty": false
+    },
+    {
+      "ridge": 2,
+      "initialHeightMm": 12.1035,
+      "initialExpandedUncertaintyMm": 0.0031,
+      "cutHeightMm": 12.1189,
+      "cutExpandedUncertaintyMm": 0.0031,
+      "publishedDeflectionMm": 0.0154,
+      "deflectionExpandedUncertaintyMm": 0.0043,
+      "recomputedDeflectionMm": 0.015399999999999636,
+      "transcriptionErrorMm": -3.642919299551295e-16,
+      "absoluteDeflectionToExpandedUncertainty": 3.5813953488372094,
+      "resolvedBeyondExpandedUncertainty": true
+    },
+    {
+      "ridge": 3,
+      "initialHeightMm": 12.1623,
+      "initialExpandedUncertaintyMm": 0.0031,
+      "cutHeightMm": 12.3449,
+      "cutExpandedUncertaintyMm": 0.003,
+      "publishedDeflectionMm": 0.1826,
+      "deflectionExpandedUncertaintyMm": 0.0043,
+      "recomputedDeflectionMm": 0.18260000000000076,
+      "transcriptionErrorMm": 7.494005416219807e-16,
+      "absoluteDeflectionToExpandedUncertainty": 42.46511627906977,
+      "resolvedBeyondExpandedUncertainty": true
+    },
+    {
+      "ridge": 4,
+      "initialHeightMm": 12.1606,
+      "initialExpandedUncertaintyMm": 0.003,
+      "cutHeightMm": 12.6838,
+      "cutExpandedUncertaintyMm": 0.0031,
+      "publishedDeflectionMm": 0.5232,
+      "deflectionExpandedUncertaintyMm": 0.0043,
+      "recomputedDeflectionMm": 0.5231999999999992,
+      "transcriptionErrorMm": -7.771561172376096e-16,
+      "absoluteDeflectionToExpandedUncertainty": 121.67441860465117,
+      "resolvedBeyondExpandedUncertainty": true
+    },
+    {
+      "ridge": 5,
+      "initialHeightMm": 12.1007,
+      "initialExpandedUncertaintyMm": 0.0031,
+      "cutHeightMm": 13.159,
+      "cutExpandedUncertaintyMm": 0.0031,
+      "publishedDeflectionMm": 1.0583,
+      "deflectionExpandedUncertaintyMm": 0.0043,
+      "recomputedDeflectionMm": 1.058300000000001,
+      "transcriptionErrorMm": 8.881784197001252e-16,
+      "absoluteDeflectionToExpandedUncertainty": 246.11627906976744,
+      "resolvedBeyondExpandedUncertainty": true
+    },
+    {
+      "ridge": 6,
+      "initialHeightMm": 11.9942,
+      "initialExpandedUncertaintyMm": 0.0031,
+      "cutHeightMm": 13.803,
+      "cutExpandedUncertaintyMm": 0.0031,
+      "publishedDeflectionMm": 1.8088,
+      "deflectionExpandedUncertaintyMm": 0.0043,
+      "recomputedDeflectionMm": 1.8088000000000015,
+      "transcriptionErrorMm": 1.5543122344752192e-15,
+      "absoluteDeflectionToExpandedUncertainty": 420.65116279069764,
+      "resolvedBeyondExpandedUncertainty": true
+    }
+  ],
+  "meanDeflectionMm": 0.5976333333333333,
+  "rmsDeflectionMm": 0.8849746455878459,
+  "deflectionRangeMm": 1.8113,
+  "maximumAbsoluteDeflectionMm": 1.8088,
+  "maximumAbsoluteDeflectionRidge": 6,
+  "maximumExpandedUncertaintyMm": 0.0043,
+  "resolvedRidgeCount": 5,
+  "unresolvedRidgeIds": [
+    1
+  ],
+  "monotonicIncreasingAcrossMeasuredRidges": true,
+  "processCapabilityAssessable": false,
+  "physicalObservationEvidence": true,
+  "projectPerformedMeasurement": false,
+  "syntheticFixturePhysicallyValidated": false,
+  "interpretation": [
+    "The NIST ridge-deflection data are external physical observations with reported expanded uncertainty (k=2).",
+    "Ridge identity is retained across the pre-release and post-EDM-release measurement states, so release distortion is a geometry-linked measurand rather than an unregistered coordinate difference.",
+    "This single-artifact benchmark does not support Cp/Cpk or production capability claims because no product tolerance specification or production distribution is present.",
+    "The external metrology case validates the study's measurement/provenance handling only; it does not physically validate the separate synthetic fixture structural model."
+  ],
+  "source": {
+    "normalizedMeasurementCsvSha256": "sha256:18f3adb8d1c0501cbcb7d4a667e18150886642e471951eb0f5062c8ec495e80f",
+    "sourceManifestSha256": "sha256:19c2cb9c040b8675baccff0e71359b4fecaacd144a263adcf709f331e2fe88e8",
+    "nominalCad": {
+      "status": "external-canonical-reference",
+      "expectedSha256": "sha256:623ee615d015bb231accdff3594592c3c7c563d98c463bd21680da2c0005d055",
+      "observedSha256": null,
+      "canonicalUrl": "https://data.nist.gov/od/ds/ark:/88434/mds2-2607/CAD_Geometry/AMB2022-01-AMMT-PartCAD.STEP",
+      "nistPdrDoi": "10.18434/mds2-2607"
+    },
+    "measurementPdrDoi": "10.18434/mds2-2711",
+    "publicationDoi": "10.1007/s40192-023-00310-w",
+    "expandedUncertaintyCoverage": "k=2"
+  }
+}

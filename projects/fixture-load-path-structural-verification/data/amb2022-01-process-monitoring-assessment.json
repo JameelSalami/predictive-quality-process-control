@@ -1,0 +1,39 @@
+{
+  "schema": "fixture-structural.process-monitoring-assessment/v1",
+  "status": "cross-stage-unpaired",
+  "inProcessFeatures": [
+    "TAM",
+    "SCR"
+  ],
+  "inProcessObservationAvailable": true,
+  "finalCtqAvailable": true,
+  "sameBuild": true,
+  "samePhysicalPart": false,
+  "spatialFeatureRegistrationAvailable": false,
+  "pairedPredictionAssessable": false,
+  "processCapabilityAssessable": false,
+  "allowedUses": [
+    "Define auditable in-process thermal features (TAM and SCR).",
+    "Separate in-process observability from post-process dimensional verification.",
+    "Specify the data contract required for a future same-part thermal-to-CTQ predictor.",
+    "Use the final CMM CTQ independently as external physical metrology evidence."
+  ],
+  "blockedUses": [
+    "Do not regress P2 ridge deflection on P1 thermography as if observations were paired.",
+    "Do not claim causal thermal-to-deflection linkage from same-build nominal similarity.",
+    "Do not report Cpk/Ppk without a production population and engineering specification limits."
+  ],
+  "gateReasons": [
+    "signals-and-ctq-are-different-physical-parts",
+    "no-signal-to-ctq-spatial-registration"
+  ],
+  "authority": "verification",
+  "source": {
+    "manifestSha256": "sha256:3e819382012cdeb290c03fa1a85b330c729e99dc9b2d36f19043a632c8cd3ee9",
+    "thermographyDatasetDoi": "10.18434/mds2-2715",
+    "deflectionDatasetDoi": "10.18434/mds2-2711",
+    "signalPart": "AMB2022-718-AMMT-B7-P1",
+    "ctqPart": "AMB2022-718-AMMT-B7-P2",
+    "rawThermographyVendored": false
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "fixture-structural.amb2022-process-monitoring-manifest/v1",
+  "publisher": "National Institute of Standards and Technology (NIST)",
+  "benchmark": "AMB2022-01",
+  "nominalGeometry": {
+    "sourceDoi": "10.18434/mds2-2607",
+    "note": "Four nominally identical bridge parts are fabricated on each build plate; feature identity is defined by the AMB2022 naming convention."
+  },
+  "inProcess": {
+    "datasetDoi": "10.18434/mds2-2715",
+    "datasetUrl": "https://doi.org/10.18434/mds2-2715",
+    "build": "AMB2022-718-AMMT-B7",
+    "part": "AMB2022-718-AMMT-B7-P1",
+    "sensor": "in-situ staring thermography",
+    "rawDataVendored": false,
+    "reasonRawDataNotVendored": "NIST PDR binary endpoint was not reliably retrievable in the execution environment; canonical source identity is retained instead.",
+    "features": [
+      {
+        "id": "TAM",
+        "name": "time above melting temperature",
+        "timing": "in-process",
+        "definition": "Time above the midpoint between solidus and liquidus for the melt pool at specified build locations.",
+        "use": "location-specific melt-pool thermal-history feature"
+      },
+      {
+        "id": "SCR",
+        "name": "solid cooling rate",
+        "timing": "in-process",
+        "definition": "Cooling rate immediately following complete solidification below the solidus at specified build locations.",
+        "use": "location-specific post-solidification thermal-history feature"
+      }
+    ]
+  },
+  "finalCtq": {
+    "datasetDoi": "10.18434/mds2-2711",
+    "specimen": "AMB2022-718-AMMT-B7-P2",
+    "characteristic": "ridge release deflection after partial EDM separation from the build plate",
+    "timing": "post-process",
+    "localAnalysis": "data/amb2022-01-distortion-analysis.json"
+  },
+  "pairing": {
+    "sameBuild": true,
+    "samePhysicalPart": false,
+    "sameNominalPartGeometry": true,
+    "spatialFeatureRegistrationAvailable": false,
+    "pairedPredictionAllowed": false,
+    "reason": "Thermography is associated with P1 while the published deflection specimen is P2; the current project also has no registered mapping from thermography locations to the six P2 CMM ridge measurands."
+  },
+  "capabilityBoundary": {
+    "cpkPpkAllowed": false,
+    "reason": "No production population and specification limits are available; repeated or spatial measurements on one/sister benchmark artifacts are not a process capability distribution."
+  }
+}

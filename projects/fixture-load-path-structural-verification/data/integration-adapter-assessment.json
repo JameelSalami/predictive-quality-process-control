@@ -1,0 +1,195 @@
+{
+  "schema": "manufacturing-quality.integration-adapters/v1",
+  "claimBoundary": {
+    "liveVendorCertification": false,
+    "sparkplugTckCertification": false,
+    "qifSchemaValidation": false,
+    "recordedCompatibilityFixtures": true,
+    "note": "Open-format parsers and protocol-semantic fixtures demonstrate integration boundaries; proprietary/live-system conformance requires vendor endpoint testing."
+  },
+  "productDefinition": {
+    "protocol": "ISO 10303-21 / AP242",
+    "exchangeName": "fixture-arm-v1.step",
+    "schemas": [
+      "AP242_MANAGED_MODEL_BASED_3D_ENGINEERING_MIM_LF"
+    ],
+    "entityCount": 4,
+    "product": {
+      "productId": "fixture-arm-v1",
+      "revision": "A",
+      "sourceFormat": "ISO-10303-21",
+      "sourceName": "fixture-arm-v1.step",
+      "schemaIdentifiers": [
+        "AP242_MANAGED_MODEL_BASED_3D_ENGINEERING_MIM_LF"
+      ]
+    }
+  },
+  "metrology": {
+    "protocol": "QIF 3.x",
+    "versionQif": "3.0.0",
+    "qpId": "11111111-2222-3333-4444-555555555555",
+    "measurementCount": 1,
+    "firstMeasurement": {
+      "measurementId": "101",
+      "characteristicId": "42",
+      "actualComponentId": "7",
+      "measurementSystemId": "15",
+      "timestamp": "2026-10-03T23:01:00-04:00",
+      "value": 10.02,
+      "unit": "mm",
+      "combinedUncertainty": 0.01,
+      "status": "PASS"
+    }
+  },
+  "processSignals": {
+    "opcUa": {
+      "resolvedNodeId": "ns=2;s=DED/Process/LaserPower",
+      "canonicalNamespaceUri": "urn:factory:line-a",
+      "signal": {
+        "sourceSystem": "recorded-opcua-line-a",
+        "protocol": "OPC UA",
+        "channelId": "laser-power",
+        "timestamp": "2026-10-03T23:02:00-04:00",
+        "value": 1007.2,
+        "unit": "W",
+        "quality": "good",
+        "runId": "RUN-1000W-028",
+        "unitId": "TRACK-028"
+      }
+    },
+    "mtconnect": {
+      "dataItems": [
+        {
+          "id": "laser",
+          "name": "laser_power",
+          "type": "WATTAGE",
+          "category": "SAMPLE",
+          "units": "WATT"
+        },
+        {
+          "id": "speed",
+          "name": "tcp_speed",
+          "type": "PATH_FEEDRATE",
+          "category": "SAMPLE",
+          "units": "MILLIMETER/SECOND"
+        }
+      ],
+      "currentCursor": {
+        "instanceId": "42",
+        "nextSequence": "121"
+      },
+      "sampleCursor": {
+        "instanceId": "42",
+        "nextSequence": "123"
+      },
+      "nextSampleUrl": "https://mtconnect.example.test/sample?from=121&count=1000",
+      "signals": [
+        {
+          "sourceSystem": "recorded-mtconnect-agent",
+          "protocol": "MTConnect",
+          "channelId": "laser",
+          "timestamp": "2026-10-03T23:03:01.500Z",
+          "value": 1006.8,
+          "unit": "W",
+          "quality": "good",
+          "runId": "RUN-1000W-028",
+          "unitId": "TRACK-028"
+        },
+        {
+          "sourceSystem": "recorded-mtconnect-agent",
+          "protocol": "MTConnect",
+          "channelId": "speed",
+          "timestamp": "2026-10-03T23:03:01.600Z",
+          "value": 5.81,
+          "unit": "mm/s",
+          "quality": "good",
+          "runId": "RUN-1000W-028",
+          "unitId": "TRACK-028"
+        }
+      ]
+    },
+    "sparkplugB": {
+      "acceptedMessages": 3,
+      "lastTopic": "spBv1.0/DED/DDATA/edge-1/camera-1",
+      "signals": [
+        {
+          "sourceSystem": "recorded-sparkplug-broker",
+          "protocol": "MQTT Sparkplug B",
+          "channelId": "DED/edge-1/camera-1/ir/intensity",
+          "timestamp": "2026-10-04T03:03:00.200Z",
+          "value": 174200,
+          "unit": "relative-count",
+          "quality": "good",
+          "runId": "RUN-1000W-028",
+          "unitId": "TRACK-028"
+        }
+      ]
+    }
+  },
+  "genealogy": {
+    "unitId": "TRACK-028",
+    "lotId": "POWDER-LOT-17",
+    "workOrderId": "WO-DEMO-1000W",
+    "runId": "RUN-1000W-028",
+    "recipeRevision": "DED-RECIPE-1000W-R3",
+    "equipmentId": "DED-CELL-A",
+    "startedAt": "2026-10-03T23:00:00-04:00",
+    "completedAt": "2026-10-03T23:04:00-04:00"
+  },
+  "structuralSolvers": {
+    "canonicalContract": true,
+    "calculix": {
+      "solver": "CalculiX",
+      "analysisType": "linear static",
+      "inputFormat": "Abaqus INP / CalculiX deck",
+      "outputFormat": "DAT",
+      "nodeCount": 11236,
+      "loadAverageDisplacementMm": -1.481444934782609,
+      "supportReactionN": 99.99999953000008,
+      "maxVonMisesMPa": 62.803479089589054,
+      "availableQuantities": [
+        "nodal-displacement",
+        "support-reaction",
+        "force-balance",
+        "integration-point-von-mises"
+      ],
+      "provenance": {
+        "adapterId": "calculix-native",
+        "protocol": "CalculiX deck/DAT",
+        "standardVersion": "CalculiX 2.23",
+        "authority": "live-protocol",
+        "sourceSystem": "project-executed-calculix",
+        "conformanceClaim": "none"
+      }
+    },
+    "nastran": {
+      "solver": "MSC/NX-compatible Nastran",
+      "analysisType": "SOL 101",
+      "inputFormat": "BDF/DAT",
+      "outputFormat": "F06",
+      "nodeCount": 4,
+      "loadAverageDisplacementMm": -1.505,
+      "supportReactionN": null,
+      "maxVonMisesMPa": null,
+      "availableQuantities": [
+        "nodal-displacement"
+      ],
+      "provenance": {
+        "adapterId": "nastran-recorded-f06",
+        "protocol": "Nastran BDF/F06",
+        "standardVersion": "recorded compatibility fixture",
+        "authority": "compatibility-fixture",
+        "sourceSystem": "synthetic-nastran-fixture",
+        "conformanceClaim": "syntax-and-semantics-fixture"
+      }
+    },
+    "nastranInputSummary": {
+      "solution": 101,
+      "gridCount": 4,
+      "elementCount": 1,
+      "hasCend": true,
+      "hasBeginBulk": true,
+      "hasEndData": true
+    }
+  }
+}

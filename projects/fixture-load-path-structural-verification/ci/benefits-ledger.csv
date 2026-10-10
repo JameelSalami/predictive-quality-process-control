@@ -1,0 +1,2 @@
+benefit_id,metric,baseline,counterfactual,observed,period,benefit_class,calculation,implementation_cost,realized_value,validated_by,sustainment_status,notes
+BEN-NONE,none,none,none,none,none,unclaimed,none,none,none,none,not-started,No intervention or realized benefit exists; current work is verification evidence only

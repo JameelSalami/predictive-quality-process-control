@@ -1,0 +1,19 @@
+{
+  "schema": "fixture-structural.amb2022-metrology-receipt/v1",
+  "authority": "public-physical-observation",
+  "benchmark": "AMB2022-01-PD",
+  "specimen": "AMB2022-718-AMMT-B7-P2",
+  "normalizedMeasurementCsvSha256": "sha256:18f3adb8d1c0501cbcb7d4a667e18150886642e471951eb0f5062c8ec495e80f",
+  "sourceManifestSha256": "sha256:19c2cb9c040b8675baccff0e71359b4fecaacd144a263adcf709f331e2fe88e8",
+  "analysisSha256": "sha256:3013699627668bd3e7e1a1eb1cd2edbcbcbe1edab46ee756a304954f711cb143",
+  "cadLocalStatus": "external-canonical-reference",
+  "cadExpectedSha256": "sha256:623ee615d015bb231accdff3594592c3c7c563d98c463bd21680da2c0005d055",
+  "cadObservedSha256": null,
+  "checks": {
+    "sixNamedRidgesPresent": true,
+    "publishedDeflectionsRecomputedFromHeights": true,
+    "uncertaintyRetained": true,
+    "processCapabilityClaim": false,
+    "syntheticFixturePhysicalValidation": false
+  }
+}

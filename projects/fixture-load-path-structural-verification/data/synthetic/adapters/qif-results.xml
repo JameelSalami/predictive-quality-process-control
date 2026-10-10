@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QIFDocument xmlns="http://qifstandards.org/xsd/qif3" versionQIF="3.0.0" idMax="200">
+  <QPId>11111111-2222-3333-4444-555555555555</QPId>
+  <MeasurementResults>
+    <MeasuredCharacteristics>
+      <CharacteristicMeasurements n="1">
+        <LinearCoordinateCharacteristicMeasurement id="101">
+          <CharacteristicItemId>42</CharacteristicItemId>
+          <ActualComponentId>7</ActualComponentId>
+          <MeasurementDeviceIds n="1"><Id>15</Id></MeasurementDeviceIds>
+          <TimeStamp>2026-10-03T23:01:00-04:00</TimeStamp>
+          <Status>PASS</Status>
+          <Value linearUnit="mm" combinedUncertainty="0.01">10.02</Value>
+        </LinearCoordinateCharacteristicMeasurement>
+      </CharacteristicMeasurements>
+    </MeasuredCharacteristics>
+  </MeasurementResults>
+</QIFDocument>

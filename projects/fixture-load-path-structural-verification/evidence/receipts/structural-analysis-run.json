@@ -1,0 +1,75 @@
+{
+  "schema": "fixture-structural.analysis-receipt/v1",
+  "studyId": "fixture-arm-v1",
+  "geometryDigest": "sha256:a491b39d67bec75700ab41f1079b3722ab2252324c7c19e476ad6584d7837896",
+  "result": "data/structural-analysis.json",
+  "resultDigest": "sha256:831a11ce97eb3403b100e4fe79ce07b557e64d86c0d8717716a3c9bf5c27c773",
+  "toolchain": {
+    "gmshVersion": "4.15.2-nox",
+    "ccxVersion": "This is Version 2.23"
+  },
+  "meshes": [
+    {
+      "meshSizeMm": 8,
+      "meshInput": "analysis/work/fixture-8-mesh.inp",
+      "solveInput": "analysis/work/fixture-8.inp",
+      "meshInputDigest": "sha256:94212aa7af64be8a506f68e475c062abdd758e614532d1c5f9d9672bc3a98968",
+      "solveInputDigest": "sha256:1859f03f42cf0ffea9aac3df887144b3320eb3ab289e6e47559a4f0d17af129e",
+      "gmshStdoutDigest": "sha256:4212675c11a5d53aff4c7351ae36a345682b16bdc410d003acd5aa17374706c6",
+      "ccxStdoutDigest": "sha256:51f083cd906f48d5d3b30fd652f2723d4d631216f562ea6241a0c919143f47b9",
+      "result": {
+        "meshSizeMm": 8,
+        "nodeCount": 3580,
+        "mountNodeCount": 160,
+        "loadNodeCount": 80,
+        "loadAverageUzMm": -1.4768430875000003,
+        "loadMaxAbsUzMm": 1.56887,
+        "reactionSumZN": 99.99996629999997,
+        "forceBalanceErrorN": 0.00003370000003144469,
+        "maxIntegrationPointVonMisesMPa": 55.60398168036519
+      }
+    },
+    {
+      "meshSizeMm": 5,
+      "meshInput": "analysis/work/fixture-5-mesh.inp",
+      "solveInput": "analysis/work/fixture-5.inp",
+      "meshInputDigest": "sha256:5e4aa369f256c6efb32aaa059f2959c99fd9fe42bce3797a8e1892c35f6eb2d0",
+      "solveInputDigest": "sha256:984467c94c11e3d6751cefd646a9c3536131a5b6cf6ba6e52456341b835e93ca",
+      "gmshStdoutDigest": "sha256:332a5a49f76f28e0a57c5106f2b43d3f535f3c9af132125f15e8b8655078cfcc",
+      "ccxStdoutDigest": "sha256:14cd3a1f376c4e2363ceca3e4a548696346efd39efbb15d3825db637bc4fa54b",
+      "result": {
+        "meshSizeMm": 5,
+        "nodeCount": 6089,
+        "mountNodeCount": 256,
+        "loadNodeCount": 112,
+        "loadAverageUzMm": -1.4804756696428572,
+        "loadMaxAbsUzMm": 1.572675,
+        "reactionSumZN": 100.00001492000024,
+        "forceBalanceErrorN": 0.000014920000239726505,
+        "maxIntegrationPointVonMisesMPa": 61.302448091146594
+      }
+    },
+    {
+      "meshSizeMm": 3.5,
+      "meshInput": "analysis/work/fixture-3p5-mesh.inp",
+      "solveInput": "analysis/work/fixture-3p5.inp",
+      "meshInputDigest": "sha256:d54250f1f2c864611e7dcb9f6b7d4801512a0203dc4a0a103ea10c4b0dc79da3",
+      "solveInputDigest": "sha256:80903ae5ee067f15646515e7e511797b585cff6e91dd727d6ad970e2d9c34094",
+      "gmshStdoutDigest": "sha256:881d8d9ed7c7de1378c77066d1610414405475d484881000df8157d9dbd318e0",
+      "ccxStdoutDigest": "sha256:7c07b97f58681a6325f862d5ec4ca0d82e462ff8afca9609229290f81616299a",
+      "result": {
+        "meshSizeMm": 3.5,
+        "nodeCount": 11236,
+        "mountNodeCount": 256,
+        "loadNodeCount": 184,
+        "loadAverageUzMm": -1.481444934782609,
+        "loadMaxAbsUzMm": 1.57368,
+        "reactionSumZN": 99.99999953000008,
+        "forceBalanceErrorN": 4.699999180957093e-7,
+        "maxIntegrationPointVonMisesMPa": 62.803479089589054
+      }
+    }
+  ],
+  "authority": "verification",
+  "claimLimit": "Numerical verification evidence only; not physical validation or production structural adequacy."
+}

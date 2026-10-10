@@ -1,0 +1,232 @@
+{
+  "schema": "manufacturing-quality.workflow-demo/v1",
+  "authority": "synthetic-demonstration",
+  "realDedBoundary": {
+    "sourceResult": "data/ded-process-prediction.json",
+    "prediction": {
+      "status": "supported-within-window",
+      "recipeOnlyRmseMm": 0.46832074830678644,
+      "recipePlusIrRmseMm": 0.42785748024260317
+    },
+    "msa": {
+      "status": "not-assessable",
+      "reasons": [
+        "no-crossed-or-equivalent-measurement-system-study"
+      ]
+    },
+    "capability": {
+      "status": "not-assessable",
+      "reasons": [
+        "no-production-population",
+        "no-engineering-specification-limits"
+      ]
+    },
+    "spc": {
+      "status": "not-active",
+      "reasons": [
+        "no-qualified-production-time-series"
+      ]
+    }
+  },
+  "syntheticProductionDemonstration": {
+    "dataPolicy": "synthetic-only-downstream-of-real-ded-prediction",
+    "ctq": {
+      "id": "CTQ-SYNTH-WIDTH-01",
+      "name": "synthetic dimensional CTQ",
+      "unit": "mm",
+      "specificationRevision": "SPEC-DEMO-01",
+      "measurementSystemId": "MS-DEMO-CMM-01",
+      "lsl": 9.4,
+      "usl": 10.6,
+      "target": 10
+    },
+    "policy": {
+      "id": "QUALITY-DEMO-POLICY-01",
+      "msa": {
+        "maximumPercentStudyVariation": 10,
+        "minimumDistinctCategories": 5
+      },
+      "stability": {
+        "minimumBaselineObservations": 25,
+        "sigmaLimit": 3,
+        "sameSideRunLength": 8
+      },
+      "capability": {
+        "minimumCpk": 1.33,
+        "minimumPpk": 1.33,
+        "minimumObservations": 30
+      }
+    },
+    "msa": {
+      "status": "qualified",
+      "reasons": [],
+      "partCount": 10,
+      "operatorCount": 3,
+      "repeatsPerCell": 2,
+      "repeatabilitySigma": 0.005656854249492428,
+      "reproducibilitySigma": 0.002998184635926622,
+      "grrSigma": 0.006402273901599883,
+      "partToPartSigma": 0.1845930458944557,
+      "percentStudyVariation": 3.4662338550983236,
+      "percentTolerance": 3.2011369507999436,
+      "distinctCategories": 40
+    },
+    "baseline": {
+      "status": "stable",
+      "reasons": [],
+      "observations": 32,
+      "mean": 9.999687500000004,
+      "movingRangeMean": 0.08225806451612906,
+      "withinSigma": 0.0729238160603981,
+      "lcl": 9.78091605181881,
+      "ucl": 10.218458948181198,
+      "violations": []
+    },
+    "capability": {
+      "status": "qualified",
+      "reasons": [],
+      "observations": 32,
+      "cp": 2.742588235294115,
+      "cpk": 2.7411598039215836,
+      "pp": 4.015655954631387,
+      "ppk": 4.0135644671550414
+    },
+    "monitoring": {
+      "status": "out-of-control",
+      "reasons": [
+        "special-cause-signal-detected"
+      ],
+      "observations": 16,
+      "violations": [
+        {
+          "index": 8,
+          "value": 10.26,
+          "rule": "outside-control-limit",
+          "detail": "above-UCL",
+          "withinSpecification": true
+        },
+        {
+          "index": 9,
+          "value": 10.25,
+          "rule": "outside-control-limit",
+          "detail": "above-UCL",
+          "withinSpecification": true
+        },
+        {
+          "index": 10,
+          "value": 10.27,
+          "rule": "outside-control-limit",
+          "detail": "above-UCL",
+          "withinSpecification": true
+        },
+        {
+          "index": 11,
+          "value": 10.24,
+          "rule": "outside-control-limit",
+          "detail": "above-UCL",
+          "withinSpecification": true
+        },
+        {
+          "index": 12,
+          "value": 10.28,
+          "rule": "outside-control-limit",
+          "detail": "above-UCL",
+          "withinSpecification": true
+        },
+        {
+          "index": 13,
+          "value": 10.26,
+          "rule": "outside-control-limit",
+          "detail": "above-UCL",
+          "withinSpecification": true
+        },
+        {
+          "index": 14,
+          "value": 10.23,
+          "rule": "outside-control-limit",
+          "detail": "above-UCL",
+          "withinSpecification": true
+        },
+        {
+          "index": 15,
+          "value": 10.25,
+          "rule": "outside-control-limit",
+          "detail": "above-UCL",
+          "withinSpecification": true
+        },
+        {
+          "index": 15,
+          "value": 10.25,
+          "rule": "same-side-run",
+          "detail": "8-point-run-on-high-side",
+          "withinSpecification": true
+        }
+      ]
+    },
+    "controlPlan": {
+      "schema": "manufacturing-quality.control-plan/v1",
+      "ctqId": "CTQ-SYNTH-WIDTH-01",
+      "specificationRevision": "SPEC-DEMO-01",
+      "measurementSystemId": "MS-DEMO-CMM-01",
+      "characteristic": "synthetic dimensional CTQ",
+      "specification": {
+        "lsl": 9.4,
+        "target": 10,
+        "usl": 10.6,
+        "unit": "mm"
+      },
+      "controlMethod": {
+        "chart": "I-MR",
+        "sampling": "one CTQ measurement per manufactured unit during synthetic Safe Launch demonstration",
+        "baselineObservations": 32,
+        "centerLine": 9.999687500000004,
+        "lcl": 9.78091605181881,
+        "ucl": 10.218458948181198
+      },
+      "reactionPlan": {
+        "owner": "manufacturing-quality-engineer",
+        "containment": [
+          "identify and quarantine product since last known-good control point",
+          "preserve run/lot/tool/measurement provenance"
+        ],
+        "stopCondition": "stop the synthetic process when a special-cause signal is confirmed by the declared control rule",
+        "restoreControl": [
+          "investigate assignable cause",
+          "correct process condition",
+          "verify measurement system remains qualified"
+        ],
+        "requalification": [
+          "collect a fresh stable baseline after corrective action",
+          "reassess capability before returning to normal control"
+        ]
+      }
+    },
+    "lifecycle": {
+      "state": "requalificationRequired",
+      "trace": [
+        "unqualified",
+        "measurementQualified",
+        "baselineStable",
+        "capabilityQualified",
+        "controlActive",
+        "outOfControl",
+        "containment",
+        "requalificationRequired"
+      ]
+    },
+    "ocapTriggered": true,
+    "firstViolation": {
+      "index": 8,
+      "value": 10.26,
+      "rule": "outside-control-limit",
+      "detail": "above-UCL",
+      "withinSpecification": true
+    },
+    "claimBoundary": [
+      "Synthetic MSA, specifications, production population, and drift are workflow demonstrations only.",
+      "Synthetic capability indices do not characterize the public DED dataset.",
+      "Control limits are derived from the synthetic stable baseline; specification limits come from the synthetic CTQ definition.",
+      "The reaction plan demonstrates control logic, not a production-approved instruction."
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "fixture-structural.lifecycle/v1",
+  "finalState": "evidenceReady",
+  "context": {
+    "geometryDigest": "sha256:a491b39d67bec75700ab41f1079b3722ab2252324c7c19e476ad6584d7837896",
+    "analyticalDisplacementMm": -1.5908605056809182,
+    "numericalLevels": 3,
+    "comparisonComplete": true,
+    "failure": null
+  },
+  "trace": [
+    {
+      "state": "initialized",
+      "context": {
+        "geometryDigest": null,
+        "analyticalDisplacementMm": null,
+        "numericalLevels": 0,
+        "comparisonComplete": false,
+        "failure": null
+      }
+    },
+    {
+      "state": "geometryFrozen",
+      "context": {
+        "geometryDigest": "sha256:a491b39d67bec75700ab41f1079b3722ab2252324c7c19e476ad6584d7837896",
+        "analyticalDisplacementMm": null,
+        "numericalLevels": 0,
+        "comparisonComplete": false,
+        "failure": null
+      }
+    },
+    {
+      "state": "analyticalChecked",
+      "context": {
+        "geometryDigest": "sha256:a491b39d67bec75700ab41f1079b3722ab2252324c7c19e476ad6584d7837896",
+        "analyticalDisplacementMm": -1.5908605056809182,
+        "numericalLevels": 0,
+        "comparisonComplete": false,
+        "failure": null
+      }
+    },
+    {
+      "state": "numericalSolved",
+      "context": {
+        "geometryDigest": "sha256:a491b39d67bec75700ab41f1079b3722ab2252324c7c19e476ad6584d7837896",
+        "analyticalDisplacementMm": -1.5908605056809182,
+        "numericalLevels": 3,
+        "comparisonComplete": false,
+        "failure": null
+      }
+    },
+    {
+      "state": "compared",
+      "context": {
+        "geometryDigest": "sha256:a491b39d67bec75700ab41f1079b3722ab2252324c7c19e476ad6584d7837896",
+        "analyticalDisplacementMm": -1.5908605056809182,
+        "numericalLevels": 3,
+        "comparisonComplete": true,
+        "failure": null
+      }
+    },
+    {
+      "state": "evidenceReady",
+      "context": {
+        "geometryDigest": "sha256:a491b39d67bec75700ab41f1079b3722ab2252324c7c19e476ad6584d7837896",
+        "analyticalDisplacementMm": -1.5908605056809182,
+        "numericalLevels": 3,
+        "comparisonComplete": true,
+        "failure": null
+      }
+    }
+  ],
+  "authority": "none"
+}

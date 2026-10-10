@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<MTConnectDevices xmlns="urn:mtconnect.org:MTConnectDevices:2.5">
+  <Header creationTime="2026-10-03T23:03:00Z" sender="agent-a" instanceId="42" bufferSize="4096" version="2.5.0.0"/>
+  <Devices>
+    <Device id="dev1" name="DED-CELL">
+      <DataItems>
+        <DataItem id="laser" name="laser_power" category="SAMPLE" type="WATTAGE" units="WATT"/>
+        <DataItem id="speed" name="tcp_speed" category="SAMPLE" type="PATH_FEEDRATE" units="MILLIMETER/SECOND"/>
+      </DataItems>
+    </Device>
+  </Devices>
+</MTConnectDevices>

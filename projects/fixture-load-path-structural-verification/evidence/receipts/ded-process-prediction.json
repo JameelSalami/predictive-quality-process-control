@@ -1,0 +1,14 @@
+{
+  "schema": "fixture-structural.ded-process-prediction-receipt/v1",
+  "authority": "verification",
+  "pairedCsvSha256": "sha256:106fa221f88a08257e3e23d9a7ee138cabb6f12484fcf98d0678d1db93c8f65b",
+  "sourceManifestSha256": "sha256:99b192b3880960bf0e47e43514285600dcc0f82809aa715c59ec01d55a3682ef",
+  "resultSha256": "sha256:31660f4cd9a328c7ae3298d6c1bc6f539d4fbb01166b39afc607981454fc6ed3",
+  "checks": {
+    "pairedObservationCount": 23,
+    "alignedIrFrameCount": 4905,
+    "primaryIrRmseLowerThanRecipe": true,
+    "unseenSpeedExtrapolationSupported": false,
+    "cpkPpkClaim": false
+  }
+}

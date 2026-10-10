@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "slug": "fixture-load-path-structural-verification",
+  "title": "Predictive Quality & Process Control: From In-Process Sensing to Final CTQ",
+  "companyOrDomain": "Reusable manufacturing quality workflow demonstrated with public DED-LB data, synthetic MSA/SPC/OCAP, NIST metrology, and numerical verification",
+  "created": "2026-10-03",
+  "status": "verification",
+  "cleanRoom": true,
+  "dataPolicy": "public-or-synthetic-only",
+  "problem": {
+    "id": 15,
+    "slug": "design-to-manufacturing-optimization",
+    "title": "Design-to-manufacturing optimization",
+    "question": "How should geometry and process parameters change together to improve CNC, additive, assembly, inspection, maintenance, and end-of-life outcomes?",
+    "economic": [
+      "piece cost",
+      "machining/build time",
+      "tooling",
+      "setups",
+      "post-processing",
+      "inspection",
+      "lifecycle cost"
+    ],
+    "human": [
+      "ergonomics",
+      "assembly burden",
+      "serviceability",
+      "cognitive load"
+    ],
+    "ecological": [
+      "material",
+      "energy",
+      "support waste",
+      "repairability",
+      "product lifetime"
+    ],
+    "ci": [
+      "DFM/DFA",
+      "DFSS",
+      "DOE",
+      "FMEA",
+      "robust design",
+      "optimization"
+    ],
+    "solarpunk": [
+      "repairability",
+      "modularity",
+      "long life",
+      "material sufficiency"
+    ],
+    "worker": [
+      "eliminate awkward operations",
+      "safe assembly/service access",
+      "human review of tradeoffs"
+    ]
+  },
+  "outputs": {
+    "landing": "dist/index.html",
+    "html": "dist/case-study.html",
+    "pdf": "dist/case-study.pdf",
+    "video": "dist/demo.mp4",
+    "interactive3d": "dist/interactive-3d.html",
+    "researchPack": "dist/research-pack.json",
+    "sourceArchive": "dist/fixture-load-path-structural-verification-source.zip"
+  }
+}

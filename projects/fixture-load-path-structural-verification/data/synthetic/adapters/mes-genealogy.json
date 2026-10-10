@@ -1,0 +1,14 @@
+{
+  "units": [
+    {
+      "unitId": "TRACK-028",
+      "lotId": "POWDER-LOT-17",
+      "workOrderId": "WO-DEMO-1000W",
+      "runId": "RUN-1000W-028",
+      "recipeRevision": "DED-RECIPE-1000W-R3",
+      "equipmentId": "DED-CELL-A",
+      "startedAt": "2026-10-03T23:00:00-04:00",
+      "completedAt": "2026-10-03T23:04:00-04:00"
+    }
+  ]
+}

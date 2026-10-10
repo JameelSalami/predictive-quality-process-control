@@ -1,0 +1,15 @@
+{
+  "schema": "manufacturing-quality.workflow-demo-receipt/v1",
+  "authority": "verification",
+  "demoInputSha256": "sha256:8d63c1eb289b112fd5534f8563d3e813e568f0e3f3a8da3e54116eb69be30f5a",
+  "dedPredictionSha256": "sha256:31660f4cd9a328c7ae3298d6c1bc6f539d4fbb01166b39afc607981454fc6ed3",
+  "resultSha256": "sha256:2e3dac9a5180b6954183daf6f9f445db1fa0f38b9041f511a66347c5391a0f2b",
+  "checks": {
+    "realDedDownstreamCapabilityClaim": false,
+    "syntheticMsaQualified": true,
+    "syntheticBaselineStable": true,
+    "syntheticCapabilityQualified": true,
+    "syntheticOcapTriggered": true,
+    "lifecycleEndsRequalificationRequired": true
+  }
+}

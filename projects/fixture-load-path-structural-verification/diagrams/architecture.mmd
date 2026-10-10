@@ -1,0 +1,26 @@
+flowchart TB
+  subgraph External["Existing engineering / manufacturing systems"]
+    PLM["CAD / PLM\nSTEP Part 21 · AP242"]
+    CAE["CAE\nCalculiX · Nastran"]
+    EDGE["Machine / edge\nOPC UA · MTConnect · Sparkplug B"]
+    MES["MES / genealogy\nREST · SQL"]
+    MET["Metrology\nQIF 3.x"]
+  end
+
+  CORE["Canonical engineering model\nproduct revision · feature / CTQ identity\nunit · run · recipe · equipment\nprocess signal · measurement · solver result"]
+
+  PLM --> CORE
+  CAE --> CORE
+  EDGE --> CORE
+  MES --> CORE
+  MET --> CORE
+
+  CORE --> FEA["FEA verification\nequilibrium · convergence · cross-check"]
+  CORE --> PQ["Predictive quality\nrecipe + sensing → final CTQ"]
+  PQ --> GATE["Evidence gates\nMSA → stability → capability"]
+  GATE --> SPC["SPC / OCAP\nspecial cause → containment → requalification"]
+
+  RECEIPT["Receipts + source digests\nfail closed on missing identity/evidence"]
+  CORE -.-> RECEIPT
+  FEA -.-> RECEIPT
+  SPC -.-> RECEIPT

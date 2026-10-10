@@ -1,0 +1,41 @@
+{
+  "schema": "fixture-structural.ded-process-prediction/v1",
+  "observations": 23,
+  "alignedIrFrames": 4905,
+  "maximumLaserMeanRelativeDeviation": 0.059713414634146374,
+  "maximumTcpMeanRelativeDeviation": 0.03349999999999994,
+  "primary": {
+    "recipeOnly": {
+      "rmseMm": 0.46832074830678644,
+      "maeMm": 0.38585591180696893,
+      "r2": 0.2495065384713654
+    },
+    "recipePlusIr": {
+      "rmseMm": 0.42785748024260317,
+      "maeMm": 0.339125960572645,
+      "r2": 0.3735904456387821
+    },
+    "relativeRmseReduction": 0.0864007589039738,
+    "irAddsPredictiveValue": true
+  },
+  "stress": {
+    "recipeOnly": {
+      "rmseMm": 0.6330664502042106,
+      "maeMm": 0.5788903914288611,
+      "r2": -0.37138284246805564
+    },
+    "recipePlusIr": {
+      "rmseMm": 0.5924723263458938,
+      "maeMm": 0.5163298324772654,
+      "r2": -0.20114725867550853
+    },
+    "relativeRmseReduction": 0.06412300611605981,
+    "unseenSpeedExtrapolationSupported": false
+  },
+  "source": {
+    "doi": "10.5281/zenodo.19727700",
+    "license": "CC BY 4.0",
+    "pairedCsvSha256": "sha256:106fa221f88a08257e3e23d9a7ee138cabb6f12484fcf98d0678d1db93c8f65b",
+    "sourceManifestSha256": "sha256:99b192b3880960bf0e47e43514285600dcc0f82809aa715c59ec01d55a3682ef"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "fixture-structural.amb2022-process-monitoring-receipt/v1",
+  "authority": "verification",
+  "manifestSha256": "sha256:3e819382012cdeb290c03fa1a85b330c729e99dc9b2d36f19043a632c8cd3ee9",
+  "assessmentSha256": "sha256:e0f66060f81317c2eadde813440cf88a8e7fbd935e951747eca6bb991bdc508c",
+  "status": "cross-stage-unpaired",
+  "checks": {
+    "inProcessFeaturesDeclared": true,
+    "finalCtqDeclared": true,
+    "specimenIdentityChecked": true,
+    "pairedPredictionAssessable": false,
+    "crossPartRegressionBlocked": true,
+    "processCapabilityClaim": false
+  }
+}

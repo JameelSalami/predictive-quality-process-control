@@ -1,0 +1,13 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('AP242 interoperability fixture - identity only'),'2;1');
+FILE_NAME('fixture-arm-v1.step','2026-10-03T23:00:00-04:00',('CI Research Program'),('OpenAI'),'adapter-fixture','none','none');
+FILE_SCHEMA(('AP242_MANAGED_MODEL_BASED_3D_ENGINEERING_MIM_LF'));
+ENDSEC;
+DATA;
+#10=PRODUCT('fixture-arm-v1','Fixture Arm','',(#20));
+#11=PRODUCT_DEFINITION_FORMATION('A','REV A',#10);
+#20=PRODUCT_CONTEXT('',#30,'mechanical');
+#30=APPLICATION_CONTEXT('managed model based 3d engineering');
+ENDSEC;
+END-ISO-10303-21;

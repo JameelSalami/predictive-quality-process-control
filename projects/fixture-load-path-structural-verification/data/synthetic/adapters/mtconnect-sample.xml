@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<MTConnectStreams xmlns="urn:mtconnect.org:MTConnectStreams:2.5">
+  <Header creationTime="2026-10-03T23:03:02Z" sender="agent-a" instanceId="42" bufferSize="4096" firstSequence="100" lastSequence="122" nextSequence="123" version="2.5.0.0"/>
+  <Streams>
+    <DeviceStream name="DED-CELL" uuid="dev1"><ComponentStream component="Controller" name="controller" componentId="ctrl">
+      <Samples>
+        <Wattage dataItemId="laser" timestamp="2026-10-03T23:03:01.500Z" sequence="121">1006.8</Wattage>
+        <PathFeedrate dataItemId="speed" timestamp="2026-10-03T23:03:01.600Z" sequence="122">5.81</PathFeedrate>
+      </Samples>
+    </ComponentStream></DeviceStream>
+  </Streams>
+</MTConnectStreams>

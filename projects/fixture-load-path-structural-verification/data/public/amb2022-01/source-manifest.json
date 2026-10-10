@@ -1,0 +1,30 @@
+{
+  "schema": "fixture-structural.amb2022-source-manifest/v1",
+  "benchmark": "AMB2022-01-PD",
+  "specimen": "AMB2022-718-AMMT-B7-P2",
+  "publisher": "National Institute of Standards and Technology (NIST)",
+  "geometry": {
+    "nistPdrDoi": "10.18434/mds2-2607",
+    "canonicalUrl": "https://data.nist.gov/od/ds/ark:/88434/mds2-2607/CAD_Geometry/AMB2022-01-AMMT-PartCAD.STEP",
+    "localPath": "data/public/amb2022-01/AMB2022-01-AMMT-PartCAD.STEP",
+    "expectedSha256": "sha256:623ee615d015bb231accdff3594592c3c7c563d98c463bd21680da2c0005d055",
+    "localCopyPolicy": "optional; if present, runner must verify the exact published hash before admitting it"
+  },
+  "measurement": {
+    "nistPdrDoi": "10.18434/mds2-2711",
+    "publicationDoi": "10.1007/s40192-023-00310-w",
+    "publicationUrl": "https://www.nist.gov/publications/part-deflection-measurements-am-bench-in718-3d-build-artifacts",
+    "normalizedCsvPath": "data/public/amb2022-01/part-deflection.csv",
+    "transcription": "Published Tables 4, 7, and 8: initial ridge heights, post-EDM-cut ridge heights, and deflection with expanded uncertainty.",
+    "measurand": "delta_i = z_i_cut - z_i_initial",
+    "method": "Tactile CMM ridge-height measurement before and after partial EDM release; six points per measured ridge and nearby build-plate areas used as references to reduce plate-warp influence.",
+    "expandedUncertaintyCoverage": "k=2"
+  },
+  "authorityBoundary": {
+    "physicalObservation": true,
+    "projectPerformedMeasurement": false,
+    "syntheticFixturePhysicallyValidated": false,
+    "processCapabilityAssessable": false,
+    "note": "This public benchmark supplies real physical metrology for the representation/measurement lane. It does not validate the synthetic fixture structural model."
+  }
+}

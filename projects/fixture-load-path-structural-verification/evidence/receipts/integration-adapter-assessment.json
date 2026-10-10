@@ -1,0 +1,27 @@
+{
+  "schema": "manufacturing-quality.integration-adapters-receipt/v1",
+  "authority": "verification",
+  "fixtureHashes": {
+    "product-ap242.stp": "sha256:ea2e49e1690f6ba41a4d4a3554a0bb7280aa312659220d745577e01c7c6052d9",
+    "qif-results.xml": "sha256:bf98cff5a5c1700fa8ffbca0e656171ca73eecb66bb74f7169f6a17c9f064612",
+    "opcua-datavalue.json": "sha256:ca822d77029409a56add07f17fdb8ff2b91c5618b7f7c1708185545af0359607",
+    "mtconnect-probe.xml": "sha256:82274134d1a8ccb9c61ffbd60b11240a1e26fe1ce64268b79b0c055e665fecd7",
+    "mtconnect-current.xml": "sha256:9e304f9a9342e4b45e5428b7814e7431e8ac47b44f5abde4555e3555a5bfbbfe",
+    "mtconnect-sample.xml": "sha256:cdcd9c6ec31555cdb98036a1c154b258aaa33c264692b17dc0237b4a015a960c",
+    "sparkplug-session.json": "sha256:b8ae56a67d333396d647baf729d99ed52e6cfb125ad569128133a36db1336b91",
+    "mes-genealogy.json": "sha256:b80405a13bb6a95fa332e7a2e6483b255aa185f1ef5f8b0f01c58e9ce5c61db2",
+    "nastran-model.bdf": "sha256:f0f347db6dbc07bb80a9f3fde9d1a2e86440806ce47ac1df33cc6a1f1aacd222",
+    "nastran-result.f06": "sha256:d5d08b77c058b3e578fb18ec30dba6c281bc9ffd717eb7ab48b6cf3b931781fb"
+  },
+  "resultSha256": "sha256:e807acb34a15584bfeca925f9d90f2c6bbab90a53426a3e4e1ba2f35987048fb",
+  "checks": {
+    "ap242Identified": true,
+    "qifMeasurementParsed": true,
+    "opcUaNamespaceResolvedByUri": true,
+    "mtconnectCursorContinuous": true,
+    "sparkplugSessionAccepted": true,
+    "mesGenealogyBound": true,
+    "sharedStructuralContract": true,
+    "vendorCertificationClaim": false
+  }
+}

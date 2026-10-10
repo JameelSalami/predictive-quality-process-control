@@ -1,0 +1,410 @@
+---
+title: "Predictive Quality & Process Control"
+subtitle: "From in-process sensing to final CTQ, MSA, capability, SPC, and OCAP"
+format:
+  html:
+    toc: true
+---
+
+# Executive summary
+
+For a one-page reviewer view, see [PORTFOLIO_BRIEF.md](PORTFOLIO_BRIEF.md).
+
+This project demonstrates a reusable manufacturing-quality workflow rather than a DED-specific model.
+
+The real-data question is:
+
+> **Does an in-process signal improve prediction of the final physical CTQ beyond the commanded recipe?**
+
+On 23 evidence-clean DED-LB runs containing 4,905 laser-active IR frames, adding two simple IR features reduces grouped-held-out bead-width RMSE from **0.4683 mm to 0.4279 mm**, an **8.64% reduction**, while pooled held-out R² increases from **0.250 to 0.374**.
+
+A harder leave-one-speed-level-out test remains below zero R², so the result is bounded to the sampled process window.
+
+The second question is:
+
+> **What must happen before a CTQ can drive production control?**
+
+The public DED data do not contain a valid crossed/equivalent MSA study, production population, or engineering specification limits. The real-data path therefore stops automatically before capability and SPC.
+
+A separate **synthetic-only production stream** demonstrates the downstream control workflow:
+
+```text
+process-to-CTQ evidence
+        ↓
+measurement-system qualification
+        ↓
+stable baseline
+        ↓
+capability gate
+        ↓
+SPC monitoring
+        ↓
+special-cause signal
+        ↓
+OCAP containment
+        ↓
+corrective action
+        ↓
+requalification required
+```
+
+The synthetic stream is not used to make claims about DED capability.
+
+![System architecture](figures/system-architecture.svg){fig-alt="Existing CAD/PLM, CAE, machine, MES, and metrology systems normalize into a canonical engineering model feeding FEA verification and predictive quality/process control."}
+
+# Why this architecture
+
+Current manufacturing guidance supports a control-loop interpretation rather than treating MSA, capability, SPC, and the control plan as isolated calculations.
+
+AIAG's 2024 standalone Control Plan manual added guidance for highly automated manufacturing, software-managed control plans, Safe Launch, and stronger reaction-plan expectations. The 2026 AIAG/VDA SPC manual explicitly connects process knowledge, statistical monitoring, capability, control-plan execution, and time-dependent behavior. NIST likewise distinguishes **control limits**, which describe process behavior, from **specification limits**, which describe product requirements.
+
+That suggests a software workflow with explicit gates:
+
+1. trust the measurement;
+2. establish a stable baseline;
+3. assess capability against engineering specifications;
+4. activate monitoring;
+5. react to special causes;
+6. require requalification after corrective action.
+
+The software should refuse to skip a gate.
+
+# Canonical CTQ contract
+
+The authoritative production object is not a chart or a Cpk number. It is the CTQ definition:
+
+```text
+CTQ
+├── feature / characteristic identity
+├── units
+├── specification revision
+├── LSL / target / USL
+└── measurement-system identity
+```
+
+Everything else is a derived projection of that definition plus observed data.
+
+This mirrors the broader project rule: authoritative engineering intent stays upstream; analyses, charts, capability indices, and reaction artifacts remain downstream and revision-bound.
+
+# Real process-to-CTQ evidence
+
+The open Zenodo DED-LB Ti-6Al-4V dataset includes commanded parameters, process monitoring, IR imagery, and metallographic cross sections.
+
+The admitted dataset contains:
+
+- tracks 28–50;
+- monitoring captures C40–C62;
+- 23 same-run observations;
+- 4,905 laser-active IR frames;
+- same-track macrograph-derived bead geometry.
+
+The monitoring-capture IDs are not deposition-track IDs. A naive join initially generated a stronger result, but command-vs-monitor checks falsified the mapping. The admitted relation is:
+
+[
+capture = track + 12
+]
+
+for the selected source block.
+
+# Prediction result
+
+A fixed standardized ridge-regression treatment compares a recipe-only baseline with recipe plus two active-frame IR features.
+
+## Primary grouped holdout
+
+Leave one powder-flow level out at a time:
+
+| Model | RMSE | MAE | Held-out R² |
+| --- | ---: | ---: | ---: |
+| Recipe only | 0.4683 mm | 0.3859 mm | 0.250 |
+| Recipe + IR | **0.4279 mm** | **0.3391 mm** | **0.374** |
+
+Relative RMSE reduction: **8.64%**.
+
+![Real DED grouped-held-out prediction result](figures/prediction-performance.svg){fig-alt="Recipe-only bead-width RMSE of 0.4683 mm versus recipe plus IR RMSE of 0.4279 mm, with unseen-speed extrapolation explicitly unsupported."}
+
+## Unseen-speed stress test
+
+| Model | RMSE | MAE | Held-out R² |
+| --- | ---: | ---: | ---: |
+| Recipe only | 0.6331 mm | 0.5789 mm | -0.371 |
+| Recipe + IR | 0.5925 mm | 0.5163 mm | -0.201 |
+
+This does not establish extrapolation to new speed regimes.
+
+# Real-data quality gate
+
+The workflow then asks whether the same DED CTQ can proceed into MSA, capability, and SPC.
+
+It cannot.
+
+```text
+prediction        SUPPORTED WITHIN WINDOW
+MSA               NOT ASSESSABLE
+capability        NOT ASSESSABLE
+SPC               NOT ACTIVE
+```
+
+Reasons include:
+
+- no crossed or equivalent measurement-system study;
+- no production population;
+- no engineering specification limits;
+- no qualified production time series.
+
+The engine returns these as typed gate outcomes instead of calculating meaningless indices.
+
+# Synthetic downstream demonstration
+
+To demonstrate the full manufacturing workflow without inventing facts about the public dataset, the repository contains a clearly marked synthetic control scenario.
+
+## Measurement-system gate
+
+The synthetic crossed Gage R&R fixture contains:
+
+- 10 parts;
+- 3 operators;
+- 2 repeats per part/operator cell.
+
+The ANOVA variance-component treatment returns:
+
+- Gage R&R study variation: **3.47%**;
+- percent of synthetic tolerance: **3.20%**;
+- distinct categories: **40**.
+
+Against the declared demo policy, the synthetic measurement system qualifies.
+
+These thresholds are project-demo policy inputs, not represented as universal AIAG/customer requirements.
+
+# Stable baseline
+
+The synthetic production baseline contains 32 individual observations.
+
+An I-MR treatment yields:
+
+- center line: **9.9997 mm**;
+- LCL: **9.7809 mm**;
+- UCL: **10.2185 mm**;
+- no declared baseline special-cause signals.
+
+The baseline therefore qualifies for the next demo gate.
+
+The current demo uses I-MR because the synthetic sampling structure is one measurement per produced unit. A production implementation should select the chart from the actual data type, subgroup structure, process dynamics, and monitoring objective rather than defaulting to I-MR.
+
+# Capability
+
+Only after MSA and baseline stability pass does the workflow calculate capability.
+
+Synthetic demonstration:
+
+| Metric | Value |
+| --- | ---: |
+| Cp | 2.743 |
+| Cpk | 2.741 |
+| Pp | 4.016 |
+| Ppk | 4.014 |
+
+Again, these numbers describe only the synthetic workflow fixture.
+
+The important software behavior is that capability becomes **not assessable** when MSA, stability, population size, or engineering specifications are absent.
+
+# SPC before spec failure
+
+The synthetic monitor stream introduces a deliberate upward process shift.
+
+The first alarm occurs at:
+
+**10.26 mm**
+
+The synthetic UCL is:
+
+**10.2185 mm**
+
+The engineering USL is:
+
+**10.6 mm**
+
+Therefore the process is statistically out of control while the measured unit is still within engineering specification.
+
+This is the reason the workflow keeps control limits and specification limits as separate objects.
+
+A simple pass/fail inspection would still call the 10.26 mm unit acceptable. The process-control layer sees evidence of a special cause and invokes the reaction plan earlier.
+
+![Synthetic SPC signal occurs before specification failure](figures/spc-ocap.svg){fig-alt="Synthetic control chart showing a first special-cause signal at 10.26 mm above the UCL but still below the 10.6 mm USL, followed by OCAP containment and required requalification."}
+
+# OCAP lifecycle
+
+This is where XState is justified.
+
+The runtime lifecycle is:
+
+```text
+unqualified
+→ measurementQualified
+→ baselineStable
+→ capabilityQualified
+→ controlActive
+→ outOfControl
+→ containment
+→ requalificationRequired
+```
+
+The synthetic reaction plan requires:
+
+- identify and quarantine product since the last known-good control point;
+- preserve run, lot, tool, and measurement provenance;
+- stop the synthetic process on a confirmed special-cause signal;
+- investigate and correct the assignable cause;
+- verify the measurement system remains qualified;
+- collect a fresh stable baseline;
+- reassess capability before normal control resumes.
+
+The system deliberately does **not** jump directly from correction back to production.
+
+# Why Effect and XState are separated
+
+The project uses the tools for different jobs.
+
+**Effect** orchestrates analytical gates and fails closed when required evidence is missing.
+
+**XState** models the event-driven operational lifecycle after the statistical gates have established that control is eligible.
+
+The equations remain pure TypeScript functions. The state machine does not own statistical truth, and the statistical functions do not secretly change operational state.
+
+# Generated control plan
+
+Once the synthetic measurement system, baseline, and capability qualify, the engine generates a revision-bound control-plan object containing:
+
+- CTQ identity;
+- specification revision;
+- measurement-system identity;
+- LSL / target / USL;
+- I-MR center line and control limits;
+- sampling instruction;
+- named reaction-plan owner;
+- containment, stop, restore-control, and requalification actions.
+
+This avoids maintaining a second hand-entered definition of the CTQ inside the control plan.
+
+# Reusability
+
+The workflow is intentionally process-agnostic:
+
+```text
+process
+→ signal
+→ CTQ
+→ measurement qualification
+→ stability
+→ capability
+→ control
+→ reaction
+```
+
+For another industry, the inputs change:
+
+- welding: current/vision/thermal signal → weld CTQ;
+- battery assembly: force/vision data → dimensional/electrical CTQ;
+- semiconductor: tool/metrology data → thickness/uniformity/defect CTQ;
+- consumer electronics: assembly/metrology data → gap/flush/dimensional CTQ;
+- machining: tool/process data → dimension/surface CTQ.
+
+The gate semantics do not need to change.
+
+
+# Day-one integration boundaries
+
+The reusable quality workflow is deliberately separated from transport and vendor details. External systems are normalized into canonical product, process, measurement, genealogy, and solver-result identities before any FEA or quality calculation is allowed to consume them.
+
+```text
+CAD / PLM        CAE             machine / edge        MES             metrology
+STEP AP242       CalculiX         OPC UA                REST/SQL        QIF 3.x
+                 Nastran          MTConnect
+                                  Sparkplug B
+     \              |                |                  |                 /
+      \             |                |                  |                /
+       +-------------+----------------+------------------+---------------+
+                                      |
+                                      v
+                         canonical engineering model
+                         product revision / feature
+                         unit / run / recipe genealogy
+                         process signal / measurement
+                         normalized structural result
+                                      |
+                              +-------+-------+
+                              |               |
+                              v               v
+                        FEA verification   MSA / capability /
+                                           SPC / OCAP
+```
+
+## Implemented protocol semantics
+
+**STEP Part 21 / AP242.** The adapter checks the Part 21 exchange envelope, HEADER/DATA sections, `FILE_SCHEMA`, `FILE_NAME`, and extracts product/revision identity from the recorded fixture. It intentionally stops before geometry-kernel semantics. AP242 is the upstream product-definition boundary; the project does not claim to implement AP242 as a whole.
+
+**QIF 3.x.** The adapter validates the QIF 3 namespace/version and maps characteristic-measurement identity, actual component, measurement-device reference, timestamp, status, numeric value, unit, and combined uncertainty into the canonical measurement object. It is an evidence extractor, not a replacement for a full QIF XSD validator.
+
+**OPC UA.** The canonical node reference stores the namespace URI plus identifier. The current session `NamespaceArray` is used to derive the transport NodeId because namespace indexes are server/session-local. DataValues with Bad StatusCode are rejected and process signals require a source timestamp.
+
+**MTConnect 2.5.** The adapter handles `probe`, `current`, and `sample` response shapes, records `instanceId`, and advances the recorded `nextSequence` cursor. A changed Agent `instanceId` fails closed and requires cursor reinitialization.
+
+**Sparkplug B 3.0.** The adapter validates the `spBv1.0/<group>/<message>/<edge>/<device?>` topic structure, requires NBIRTH before data, requires DBIRTH before device data, checks the NBIRTH `bdSeq` and `Node Control/Rebirth` metrics, and enforces Edge Node sequence continuity modulo 256.
+
+**MES genealogy.** MES is treated as a business-system boundary rather than a pretend universal protocol. Recorded, REST-style, and parameterized SQL adapters resolve the same canonical unit → run → recipe revision → equipment genealogy.
+
+**CAE.** Existing project-executed CalculiX results and a recorded Nastran BDF/F06 compatibility fixture both normalize into the same structural-result contract. The Nastran lane currently admits nodal displacement only; unsupported quantities stay null rather than being fabricated.
+
+## Adapter claim boundary
+
+The adapter suite demonstrates that the internal engineering model is not coupled to demo files or one vendor. It does **not** claim:
+
+- AP242 geometry-kernel completeness;
+- full QIF schema validation;
+- OPC UA server certification;
+- MTConnect Agent certification;
+- Sparkplug TCK compatibility;
+- live MES vendor certification;
+- live Nastran/ANSYS/Abaqus execution.
+
+Those require real endpoint/software qualification. The portfolio claim is narrower: the protocols are represented at the correct integration boundaries and their critical identity/state semantics are tested.
+
+# Standards-informed boundaries
+
+The design references:
+
+- AIAG MSA 4th Edition overview;
+- AIAG Control Plan 1st Edition;
+- AIAG & VDA SPC Manual 1st Edition, published July 2026;
+- NIST Engineering Statistics Handbook sections on stability, capability, and control charts.
+
+The implementation does not reproduce proprietary manual content and does not claim that the synthetic policy thresholds are mandated by those standards.
+
+# Supporting evidence
+
+The NIST AMB2022-01 CMM case remains the uncertainty-aware physical-metrology example.
+
+The synthetic structural fixture, Gmsh/CalculiX refinement study, and independent Julia implementation remain a numerical-verification appendix.
+
+They support the engineering-method story without competing with the manufacturing-quality headline.
+
+# Reproduce
+
+```bash
+npm run study:fixture:ded-process
+npm run study:fixture:quality-system
+npm run study:fixture:figures
+npm run study:fixture:verify
+```
+
+Primary process dataset: <https://doi.org/10.5281/zenodo.19727700>
+
+AIAG Control Plan: <https://www.aiag.org/training-and-resources/manuals/details/CP-1>
+
+AIAG & VDA SPC: <https://www.aiag.org/training-and-resources/manuals/details/SPCAV-1>
+
+AIAG MSA: <https://www.aiag.org/training-and-resources/manuals/details/MSA-4>
+
+NIST process monitoring/control: <https://www.itl.nist.gov/div898/handbook/pmc/pmc.htm>
+
+No employer, proprietary, or production data are used.

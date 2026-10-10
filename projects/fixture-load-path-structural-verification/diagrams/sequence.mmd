@@ -1,0 +1,23 @@
+sequenceDiagram
+  participant PLM as Product definition / AP242
+  participant MES as MES genealogy
+  participant Edge as OPC UA / MTConnect / Sparkplug
+  participant Met as QIF / metrology
+  participant Core as Canonical engineering model
+  participant Quality as Quality engine
+  participant OCAP as Operational control
+
+  PLM->>Core: product + revision + characteristic identity
+  MES->>Core: unit + run + recipe + equipment
+  Edge->>Core: timestamped signal + quality/session state
+  Met->>Core: CTQ measurement + device + uncertainty
+  Core->>Core: validate identity / pairing / provenance
+  alt evidence incomplete or inconsistent
+    Core-->>Quality: fail closed / not assessable
+  else evidence eligible
+    Core->>Quality: normalized same-unit evidence
+    Quality->>Quality: prediction / MSA / stability / capability
+    Quality->>OCAP: activate control when gates pass
+    OCAP->>OCAP: detect special cause
+    OCAP->>OCAP: contain → correct → requalify
+  end

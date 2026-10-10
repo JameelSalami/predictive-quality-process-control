@@ -1,0 +1,14 @@
+import {createHash} from "node:crypto";
+import {readFileSync,writeFileSync} from "node:fs";
+import {resolve} from "node:path";
+import {analyzeDed,parseDedCsv} from "./ded-process.js";
+const p=resolve("projects/fixture-load-path-structural-verification");
+const csv=resolve(p,"data/public/zenodo-ded-powder/paired-track-observations.csv");
+const man=resolve(p,"data/public/zenodo-ded-powder/source-manifest.json");
+const out=resolve(p,"data/ded-process-prediction.json");
+const rec=resolve(p,"evidence/receipts/ded-process-prediction.json");
+const sha=(x:string)=>"sha256:"+createHash("sha256").update(readFileSync(x)).digest("hex");
+const a=analyzeDed(parseDedCsv(readFileSync(csv,"utf8")));
+writeFileSync(out,JSON.stringify({...a,source:{doi:"10.5281/zenodo.19727700",license:"CC BY 4.0",pairedCsvSha256:sha(csv),sourceManifestSha256:sha(man)}},null,2)+"\n");
+writeFileSync(rec,JSON.stringify({schema:"fixture-structural.ded-process-prediction-receipt/v1",authority:"verification",pairedCsvSha256:sha(csv),sourceManifestSha256:sha(man),resultSha256:sha(out),checks:{pairedObservationCount:a.observations,alignedIrFrameCount:a.alignedIrFrames,primaryIrRmseLowerThanRecipe:a.primary.irAddsPredictiveValue,unseenSpeedExtrapolationSupported:a.stress.unseenSpeedExtrapolationSupported,cpkPpkClaim:false}},null,2)+"\n");
+console.log(JSON.stringify(a,null,2));

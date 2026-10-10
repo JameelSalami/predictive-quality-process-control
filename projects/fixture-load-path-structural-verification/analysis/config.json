@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "studyId": "fixture-arm-v1",
+  "units": "mm-N-MPa",
+  "geometry": {
+    "name": "edge-defined extruded fixture arm",
+    "thicknessMm": 6,
+    "halfWidthProfile": [
+      {
+        "xMm": 0,
+        "halfWidthMm": 25
+      },
+      {
+        "xMm": 35,
+        "halfWidthMm": 25
+      },
+      {
+        "xMm": 70,
+        "halfWidthMm": 15
+      },
+      {
+        "xMm": 135,
+        "halfWidthMm": 15
+      },
+      {
+        "xMm": 160,
+        "halfWidthMm": 20
+      }
+    ],
+    "holes": [
+      {
+        "id": "mount-upper",
+        "role": "mount",
+        "xMm": 18,
+        "yMm": 13,
+        "diameterMm": 8.5
+      },
+      {
+        "id": "mount-lower",
+        "role": "mount",
+        "xMm": 18,
+        "yMm": -13,
+        "diameterMm": 8.5
+      },
+      {
+        "id": "load-pin",
+        "role": "load",
+        "xMm": 150,
+        "yMm": 0,
+        "diameterMm": 10
+      }
+    ],
+    "supportPlaneXMm": 18,
+    "loadPointXMm": 150
+  },
+  "material": {
+    "id": "aluminum-screening",
+    "label": "Aluminum linear-elastic screening assumption",
+    "youngsModulusMPa": 69000,
+    "poissonRatio": 0.33,
+    "densityKgPerM3": 2700,
+    "basis": "Synthetic screening properties. No certified alloy/temper or production allowables are claimed."
+  },
+  "loadCase": {
+    "id": "LC-TRANSVERSE-100N",
+    "loadN": -100,
+    "axis": "z",
+    "description": "100 N synthetic transverse load distributed over the load-pin cylindrical surface."
+  },
+  "meshSizesMm": [
+    8,
+    5,
+    3.5
+  ],
+  "convergence": {
+    "displacementRelativeChangeMax": 0.02,
+    "analyticalToFinestRelativeDeviationMax": 0.2
+  },
+  "toolchain": {
+    "gmsh": "gmsh",
+    "calculix": "ccx"
+  }
+}

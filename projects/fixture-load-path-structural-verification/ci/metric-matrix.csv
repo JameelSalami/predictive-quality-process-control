@@ -1,0 +1,4 @@
+metric_id,family,metric,unit,baseline,target,direction,hard_constraint,source_or_formula,notes
+M-E-NOMINAL-MASS,economic,nominal fixture mass as material/cost burden proxy,kg,0.0936841164,,min,false,geometry-derived volume x synthetic density,Cost proxy only; no quote or realized savings
+M-H-TEST-REPOSITION,human,manual displacement-probe repositionings per validation load point,repositions/trial,,0,min,false,future measurement-system design,No observed baseline yet
+M-ECO-NOMINAL-MASS,ecological,nominal material mass,kg,0.0936841164,,min,false,same geometry-derived mass quantity,No embodied-carbon or lifecycle claim

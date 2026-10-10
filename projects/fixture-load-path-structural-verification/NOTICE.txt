@@ -1,0 +1,15 @@
+INDEPENDENT ENGINEERING CASE STUDY
+
+Project: Fixture Load-Path Verification: Hand Calculations, FEA, and Physical Evidence
+Created: 2026-10-03
+Reference company/domain: Synthetic industrial fixture / automation hardware
+
+This project was independently conceived and developed as a technical research and portfolio case study.
+
+It is not commissioned, assigned, directed, supervised, or endorsed by Synthetic industrial fixture / automation hardware or any prospective employer.
+
+Unless explicitly cited as a public fact, all operational data, process parameters, layouts, events, costs, and results are synthetic assumptions created for analysis.
+
+No confidential data, source code, drawings, screenshots, process parameters, customer information, internal metrics, or other proprietary material from a current or former employer may be used in this project.
+
+Any company names are used only to identify public problem statements and public sources. No affiliation is implied.
