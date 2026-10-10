@@ -5,6 +5,12 @@ benchmark descriptions, part-deflection measurements and process-monitoring
 records for IN718 additive manufacturing.
 
 Original National Institute of Standards and Technology (NIST) datasets:
+- DOI 10.18434/mds2-2607 — B. M. Lane, L. E. Levine,
+  D. Deisenroth, H. Yeung, V. Tondare, S. Mekhontsev, J. Neira (2022).
+- DOI 10.18434/mds2-2711 — L. E. Levine, T. Q. Phan and colleagues (2022).
+- DOI 10.18434/mds2-2715 — B. M. Lane, D. Deisenroth,
+  H. Yeung, S. Mekhontsev, S. Grantham, L. E. Levine, J. Neira (2023).
+
 - Challenge description and nominal 3D builds:
   https://doi.org/10.18434/mds2-2607
 - Residual strain/stress and part deflection measurements:
@@ -18,7 +24,7 @@ https://www.nist.gov/ambench/direct-am-bench-data-links-and-referencing-guidance
 NIST's rights and reuse guidance:
 https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications
 
-**Changes and limits:** The included `part-deflection.csv` is a
+**Changes documented October 10, 2026 (selection and normalization recorded in the frozen research study):** The included `part-deflection.csv` is a
 selected/normalized project analysis table rather than the complete
 NIST PDR dataset. `process-monitoring-manifest.json` records the
 researcher's mapping and evidence-eligibility decisions. The original

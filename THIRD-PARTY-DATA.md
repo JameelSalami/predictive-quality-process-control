@@ -53,14 +53,17 @@ streams are **not redistributed** in this snapshot.
 
 | Public dataset | Original publisher / permanent source | Use |
 | --- | --- | --- |
-| AMB2022-01 3D Build Modeling Challenge Description Data | National Institute of Standards and Technology, https://doi.org/10.18434/mds2-2607 | CAD geometry/problem identity and process setup |
-| AMB2022-01 residual stress/part deflection measurements | NIST, https://doi.org/10.18434/mds2-2711 | Independently observed part-deflection numbers |
-| AMB2022-01 in-situ thermography and processing scripts | NIST, https://doi.org/10.18434/mds2-2715 | Monitoring/thermal features and evidence of cross-part pairing limits |
+| AMB2022-01 3D Build Modeling Challenge Description Data | Lane et al. (2022), NIST, https://doi.org/10.18434/mds2-2607 | CAD geometry/problem identity and process setup |
+| AMB2022-01 residual stress/part deflection measurements | Levine et al. (2022), NIST, https://doi.org/10.18434/mds2-2711 | Independently observed part-deflection numbers |
+| AMB2022-01 in-situ thermography and processing scripts | Lane et al. (2023), NIST, https://doi.org/10.18434/mds2-2715 | Monitoring/thermal features and evidence of cross-part pairing limits |
 
 NIST provides official [AM Bench source DOI and citation guidance](https://www.nist.gov/ambench/direct-am-bench-data-links-and-referencing-guidance)
 and [data rights/attribution guidance](https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-data-software-and-technical-series-publications).
 The data in this study are smaller **selected/normalized project-derived
-summaries**, not the full NIST deposits. In particular,
+summaries**, not the full NIST deposits. **Changes documented as of October 10, 2026:**
+the project selected a subset, normalized measurements and created pairing/
+eligibility assessments; the underlying analysis was recorded in the
+frozen October 2026 study and is not a direct original NIST publication. In particular,
 `projects/fixture-load-path-structural-verification/data/public/amb2022-01/part-deflection.csv`
 and `process-monitoring-manifest.json` encode study selections and
 identity-assessment judgments. The modeled fixture is not represented as
