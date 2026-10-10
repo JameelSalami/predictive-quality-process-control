@@ -1,7 +1,7 @@
 # Attribution and rights register
 
 - **Software code:** Original project-authored source under [MIT](LICENSE)
-  subject to contributor/rightsholder review; [license scope](LICENSE-SCOPE.md).
+  with original-code licensing scope detailed in [LICENSE-SCOPE.md](LICENSE-SCOPE.md).
 - **External datasets:** Zenodo DED-LB Ti-6Al-4V powder and NIST
   AM-Bench 2022, including creators, DOIs, transformation notes and the independently
   verified original dataset CC BY 4.0 license, in

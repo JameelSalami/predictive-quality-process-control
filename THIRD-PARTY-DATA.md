@@ -106,6 +106,7 @@ only, **not** compliance certification by ISO, NIST, AIAG or vendors.
 
 CC BY 4.0 requires credit to the licensors, a license URL, source link,
 and **an indication of changes**. The derived-data notices above are
-included to make those obligations visible. Rights verification,
-contributors' ownership, source-asset provenance and the status of
-any third-party material must still be approved before publication.
+provided with the derived research records. The record-level CC BY 4.0
+license for the Zenodo powder dataset was confirmed against official Zenodo
+and DataCite metadata. Future redistributions must retain that attribution
+and independently comply with any applicable NIST/third-party conditions.
